@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <meta name="theme-color" content="#8ecaa1" />
+    <title>About</title>
+  </head>
+
+  <style>
+    html {
+      font-size: 62.5%;
+    }
+    body {
+      color: #333;
+      font-size: 1.6rem;
+      font-family: "Space Mono", monospace;
+
+      min-height: 100vh;
+
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: 1rem;
+      margin: 0 auto;
+      min-height: calc(100vh - 2rem);
+      max-width: 800px;
+    }
+    h1,
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 10px;
+      line-height: 33px;
+      word-spacing: -10px;
+    }
+    h2 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.8rem;
+    }
+    a {
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+    }
+    a:hover {
+      border-bottom: 1px solid black;
+    }
+    #circle-container {
+      position: absolute;
+      bottom: 3px;
+      right: 6px;
+    }
+    @media screen and (max-width: 400px) {
+      h1 {
+        font-size: 3.2rem;
+        margin-bottom: 10px;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+      main {
+        padding: 2rem;
+        min-height: calc(100vh - 4rem);
+      }
+    }
+  </style>
+  <body>
+    <main>
+      <h1>Pierre-Emmanuel Denys</h1>
+      <h2>Developer.</h2>
+      <p>
+        After a few years spent in
+        <a
+          href="http://lepetitnietzsche.fr"
+          rel="noopener noreferrer"
+          target="_blank"
+          lang="fr"
+          >Social sciences</a
+        >
+        and then
+        <a
+          href="https://archinfo24.hypotheses.org/3262"
+          rel="noopener noreferrer"
+          target="_blank"
+          lang="fr"
+          >Digital Humanities</a
+        >, I became a JavaScript developer, while waiting for my next mutation.
+      </p>
+      <p>
+        I like continental philosophy, countryside, eating and pretty things
+        (not eating pretty things though).
+      </p>
+      <div id="circle-container" onclick="handleClickOnColor()">
+        <svg height="45" width="50">
+          <circle
+            id="circle"
+            cx="25"
+            cy="25"
+            r="15"
+            stroke="black"
+            stroke-width="3"
+            fill=""
+          />
+        </svg>
+      </div>
+    </main>
+    <script>
+      var arrColors = ["#F9F0C1", "#C0ECCC", "#A5C8E4", "#F6A8A6"];
+      var currentColor = 0;
+      var nextColor = 1;
+
+      function updateDOMcolors() {
+        document.body.style.backgroundColor = arrColors[currentColor];
+        document.getElementById("circle").style.fill = arrColors[nextColor];
+      }
+
+      updateDOMcolors();
+
+      function handleClickOnColor() {
+        currentColor = nextColor;
+        nextColor = nextColor + 1;
+        if (nextColor === 4) {
+          nextColor = 0;
+        }
+        updateDOMcolors();
+      }
+    </script>
+  </body>
+</html>
