@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Space Mono", monospace;
+  max-width: 100%;
+  width: 100%;
+}
+a {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  border-bottom: 0px solid black;
+  transition: border-width 1s;
+}
+a:hover {
+  border-width: 1px;
+}
