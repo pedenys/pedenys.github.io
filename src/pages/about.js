@@ -57,7 +57,7 @@ const IntroductionFr = () => {
       </p>
       <p>
         J'aime la philosophie continentale, la campagne, manger et les belles
-        choses (mais nécessairement manger de belles choses).
+        choses (mais pas nécessairement manger de belles choses).
       </p>
     </>
   )
