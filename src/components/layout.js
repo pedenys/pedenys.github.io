@@ -10,35 +10,40 @@ function getRandomArbitrary(min, max) {
 }
 
 function getRandomBgColor() {
+  return "hotpink"
   const num = getRandomArbitrary(0, 3)
   return pastelColors[num]
 }
 
 const Container = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+`
+const LayoutNavContainer = styled.div`
+  flex-grow: 0;
+  height: 50px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+`
+const LayoutChildrenContainer = styled.div`
+  flex-grow: 1;
   margin: 0 auto;
   max-width: 600px;
-  width: 100%;
-  min-height: -webkit-fill-available; // webkit browsers
-  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
 `
 
 const Layout = ({ children }) => {
   return (
-    <div
-      style={{
-        backgroundColor: getRandomBgColor(),
-        maxWidth: "100%",
-        width: "100%",
-        height: "100%",
-      }}
-    >
-      <Container>
-        <div style={{ padding: "0 1rem" }}>
-          <Nav />
-          {children}
-        </div>
-      </Container>
-    </div>
+    <Container>
+      <LayoutNavContainer>
+        <Nav />
+      </LayoutNavContainer>
+      <LayoutChildrenContainer>{children}</LayoutChildrenContainer>
+    </Container>
   )
 }
 

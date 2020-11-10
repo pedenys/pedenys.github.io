@@ -2,7 +2,7 @@
 title: List git branches
 date: 2020-07-15
 author: pedenys
-excerpt: Elie
+excerpt: Print local and remote branches in terminal
 ---
 
 ```bash

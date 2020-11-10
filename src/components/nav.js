@@ -5,11 +5,12 @@ import styled from "@emotion/styled"
 const NavContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
   li {
     list-style-type: none;
-    margin-right: 4rem;
     @media screen and (min-width: 400px) {
       a  {
         margin-right: 4rem;
@@ -28,13 +29,13 @@ const Nav = () => {
         <Link to="/">pedenys</Link>
       </li>
       <li>
-        <Link to="/blog">blog</Link>
-      </li>
-      <li>
         <a href="https://github.com/pedenys">github</a>
       </li>
       <li>
         <Link to="/about">about</Link>
+      </li>
+      <li>
+        <Link to="/blog">blog</Link>
       </li>
     </NavContainer>
   )

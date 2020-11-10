@@ -3,12 +3,37 @@ import { graphql, Link } from "gatsby"
 import styled from "@emotion/styled"
 
 const BlogContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   h1 {
-    margin: 4rem 0;
+    margin: 1rem 0 2rem;
     text-align: center;
+    font-size: 2.4rem;
+  }
+  article {
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    small {
+      margin: 1rem 0;
+    }
+    p {
+      font-size: 1.25rem;
+    }
+  }
+  @media screen and (min-width: 400px) {
+    h1 {
+      margin: 3rem 0;
+      font-size: 4rem;
+    }
+    article {
+      margin-bottom: 3.5rem;
+      h2 {
+        font-size: 2.4rem;
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    }
   }
 `
 
@@ -17,7 +42,7 @@ export default function Blog({ data }) {
 
   return (
     <BlogContainer>
-      <h1>Quelques idées</h1>
+      <h1>Quelques idées et astuces</h1>
 
       {posts.map(post => (
         <article key={post.id}>
@@ -27,7 +52,7 @@ export default function Blog({ data }) {
           <small>
             {post.frontmatter.author}, {post.frontmatter.date}
           </small>
-          <p>{post.excerpt}</p>
+          <p>{post.frontmatter.excerpt}</p>
         </article>
       ))}
     </BlogContainer>
@@ -45,6 +70,7 @@ export const pageQuery = graphql`
           date(fromNow: true)
           title
           author
+          excerpt
         }
         excerpt
         id

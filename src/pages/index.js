@@ -5,11 +5,9 @@ import styled from "@emotion/styled"
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  min-height: -webkit-fill-available; // webkit browsers
-  min-height: 100vh;
+  flex-grow: 1;
 `
 
 const BioContainer = styled.main`
