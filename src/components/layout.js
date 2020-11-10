@@ -10,7 +10,6 @@ function getRandomArbitrary(min, max) {
 }
 
 function getRandomBgColor() {
-  return "hotpink"
   const num = getRandomArbitrary(0, 3)
   return pastelColors[num]
 }
@@ -27,6 +26,8 @@ const LayoutNavContainer = styled.div`
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
+
+  display: flex;
 `
 const LayoutChildrenContainer = styled.div`
   flex-grow: 1;

@@ -30,10 +30,22 @@ const IntroductionContainer = styled.main`
   }
 `
 
+const LanguageSwitch = styled.div`
+  position: fixed;
+  right: 25px;
+  bottom: 15px;
+  font-size: 3rem;
+`
+
 const IntroductionFr = () => {
   return (
     <>
-      <h1>Salut 👋</h1>
+      <h1>
+        Salut&nbsp;
+        <span role="img" aria-label="how are you emoji">
+          👋
+        </span>
+      </h1>
       <p>
         Après quelques années passées en compagnie de la{" "}
         <a
@@ -65,7 +77,12 @@ const IntroductionFr = () => {
 const IntroductionEn = () => {
   return (
     <>
-      <h1>Hi 👋</h1>
+      <h1>
+        Hi&nbsp;
+        <span role="img" aria-label="how are you emoji">
+          👋
+        </span>
+      </h1>
       <p>
         After a few years spent in{" "}
         <a
@@ -95,18 +112,28 @@ const IntroductionEn = () => {
   )
 }
 
-const About = ({ data }) => {
-  const {
-    author: { name, description },
-  } = data.site.siteMetadata
-
+const About = () => {
   const [isFrench, setIsFrench] = useState(true)
 
+  const handleClickOnSwitch = () => {
+    setIsFrench(val => !val)
+  }
   return (
     <HomeContainer>
       <IntroductionContainer>
         {isFrench ? <IntroductionFr /> : <IntroductionEn />}
       </IntroductionContainer>
+      <LanguageSwitch onClick={handleClickOnSwitch}>
+        {isFrench ? (
+          <span role="img" aria-label="usa flag">
+            🇺🇸
+          </span>
+        ) : (
+          <span role="img" aria-label="french flag">
+            🇫🇷
+          </span>
+        )}
+      </LanguageSwitch>
     </HomeContainer>
   )
 }
