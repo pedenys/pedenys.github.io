@@ -1,16 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 import styled from "@emotion/styled"
+import { navBarHeight } from "../components/nav"
 
 const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-`
-
-const BioContainer = styled.main`
+  min-height: calc(100vh - ${navBarHeight * 2}px);
   max-width: 600px;
   h1,
   h2 {
@@ -26,6 +23,7 @@ const BioContainer = styled.main`
   h2 {
     font-size: 3.5rem;
     margin-bottom: 20px;
+    text-align: center;
   }
   @media screen and (max-width: 400px) {
     h1 {
@@ -45,10 +43,8 @@ export default function Home({ data }) {
 
   return (
     <HomeContainer>
-      <BioContainer>
-        <h1>{name}</h1>
-        <h2>{description}</h2>
-      </BioContainer>
+      <h1>{name}</h1>
+      <h2>{description}</h2>
     </HomeContainer>
   )
 }

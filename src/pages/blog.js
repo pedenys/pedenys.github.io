@@ -42,7 +42,7 @@ export default function Blog({ data }) {
 
   return (
     <BlogContainer>
-      <h1>Quelques idées et astuces</h1>
+      <h1>Memento</h1>
 
       {posts.map(post => (
         <article key={post.id}>

@@ -16,34 +16,17 @@ function getRandomBgColor() {
 
 const Container = styled.div`
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
   padding: 0 2rem;
-`
-const LayoutNavContainer = styled.div`
-  flex-grow: 0;
-  height: 50px;
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-
-  display: flex;
-`
-const LayoutChildrenContainer = styled.div`
-  flex-grow: 1;
   margin: 0 auto;
   max-width: 600px;
-  margin: 0 auto;
-  display: flex;
 `
 
 const Layout = ({ children }) => {
+  document.body.style.backgroundColor = getRandomBgColor()
   return (
     <Container>
-      <LayoutNavContainer>
-        <Nav />
-      </LayoutNavContainer>
-      <LayoutChildrenContainer>{children}</LayoutChildrenContainer>
+      <Nav />
+      {children}
     </Container>
   )
 }

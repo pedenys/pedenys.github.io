@@ -1,33 +1,11 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import styled from "@emotion/styled"
+import { navBarHeight } from "../components/nav"
 
-const HomeContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  min-height: -webkit-fill-available; // webkit browsers
-  min-height: 100vh;
-`
-
-const IntroductionContainer = styled.main`
+const AboutContainer = styled.div`
+  min-height: calc(100vh - ${navBarHeight * 2}px);
   max-width: 600px;
-  h1,
-  h2 {
-    margin: 0;
-    padding: 0;
-  }
-  h1 {
-    font-size: 5rem;
-    margin-bottom: 4rem;
-  }
-  @media screen and (max-width: 400px) {
-    h1 {
-      font-size: 3.2rem;
-    }
-  }
 `
 
 const LanguageSwitch = styled.div`
@@ -119,10 +97,8 @@ const About = () => {
     setIsFrench(val => !val)
   }
   return (
-    <HomeContainer>
-      <IntroductionContainer>
-        {isFrench ? <IntroductionFr /> : <IntroductionEn />}
-      </IntroductionContainer>
+    <AboutContainer>
+      {isFrench ? <IntroductionFr /> : <IntroductionEn />}
       <LanguageSwitch onClick={handleClickOnSwitch}>
         {isFrench ? (
           <span role="img" aria-label="usa flag">
@@ -134,7 +110,7 @@ const About = () => {
           </span>
         )}
       </LanguageSwitch>
-    </HomeContainer>
+    </AboutContainer>
   )
 }
 
