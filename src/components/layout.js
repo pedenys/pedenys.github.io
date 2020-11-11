@@ -14,20 +14,24 @@ function getRandomBgColor() {
   return pastelColors[num]
 }
 
-const Container = styled.div`
+const SiteContainer = styled.div`
   min-height: 100vh;
   padding: 0 2rem;
   margin: 0 auto;
   max-width: 600px;
 `
 
+// @emotion CSS-in-JS cannot be used in Layout, probably due to use of wrapPageElement in gatsby-browser.js
+
 const Layout = ({ children }) => {
-  document.body.style.backgroundColor = getRandomBgColor()
+  if (typeof window !== `undefined`) {
+    document.body.style.backgroundColor = getRandomBgColor()
+  }
   return (
-    <Container>
+    <SiteContainer>
       <Nav />
       {children}
-    </Container>
+    </SiteContainer>
   )
 }
 

@@ -17,7 +17,7 @@ const HomeContainer = styled.div`
   h1 {
     font-size: 5rem;
     margin-bottom: 3rem;
-    line-height: 40px;
+    line-height: 55px;
     word-spacing: -10px;
   }
   h2 {

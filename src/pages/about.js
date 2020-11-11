@@ -105,7 +105,7 @@ const About = () => {
         </li>
         <li>
           <a href="https://twitter.com/_pedenys_">
-            Twitter <span>(veille)</span>
+            Twitter <span>({isFrench ? "veille" : "links digging"})</span>
           </a>
         </li>
       </ul>
