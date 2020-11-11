@@ -19,6 +19,9 @@ a {
 a:hover {
   border-bottom: 1px solid black;
 }
+a > span {
+  font-weight: normal;
+}
 h1,
 h2,
 h3,

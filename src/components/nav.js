@@ -34,13 +34,10 @@ const Nav = () => {
         <Link to="/">pedenys</Link>
       </li>
       <li>
-        <a href="https://github.com/pedenys">github</a>
+        <Link to="/blog">blog</Link>
       </li>
       <li>
         <Link to="/about">about</Link>
-      </li>
-      <li>
-        <Link to="/blog">blog</Link>
       </li>
     </NavContainer>
   )

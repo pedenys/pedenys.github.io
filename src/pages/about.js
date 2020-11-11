@@ -99,6 +99,16 @@ const About = () => {
   return (
     <AboutContainer>
       {isFrench ? <IntroductionFr /> : <IntroductionEn />}
+      <ul>
+        <li>
+          <a href="https://github.com/pedenys">GitHub</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/_pedenys_">
+            Twitter <span>(veille)</span>
+          </a>
+        </li>
+      </ul>
       <LanguageSwitch onClick={handleClickOnSwitch}>
         {isFrench ? (
           <span role="img" aria-label="usa flag">
