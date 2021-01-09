@@ -1,0 +1,23 @@
+{
+  "name": "pedenys.github.io",
+  "version": "1.0.0",
+  "description": "Plain old index.html file.",
+  "main": "colorPicker.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedenys/pedenys.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedenys/pedenys.github.io/issues"
+  },
+  "homepage": "https://github.com/pedenys/pedenys.github.io#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
