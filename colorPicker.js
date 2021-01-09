@@ -1,17 +1,15 @@
-var arrColors = ["#F9F0C1", "#C0ECCC", "#A5C8E4", "#F6A8A6"];
+var arrColors = ["#C0ECCC", "#F9F0C1", "#A5C8E4", "#F6A8A6"];
+var hoverColors = ["#610d0a", "#007f00", "#877800", "#00007F"];
 var currentColor = 0;
 var nextColor = 1;
 
 function updateDOMcolors() {
   document.body.style.backgroundColor = arrColors[currentColor];
   document.getElementById("circle").style.fill = arrColors[nextColor];
+  document.body.style.setProperty("--hoverColor", hoverColors[nextColor]);
 }
 
 updateDOMcolors();
-
-function generateColorPicker() {
-  console.log("generateColorPicker");
-}
 
 function handleClickOnColor() {
   currentColor = nextColor;
