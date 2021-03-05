@@ -5,7 +5,7 @@ date: 2020-08-15
 excerpt: Set git language globally or using alias
 ---
 
-To set language used by git, update your bash config file :
+To set language used by git, update bash config file :
 
 ```bash
 alias git='LANG=en_GB git'

@@ -1,6 +1,6 @@
 ---
 title: ESLint and TypeScript in a React / React Native project
-date: 2020-07-15
+date: 2021-02-27
 author: pedenys
 excerpt: Simple setup for ESLint and Typescript (in a React project)
 ---
@@ -58,5 +58,3 @@ Some rules I usually disable for personal comfort (but again it's personal) :
   	// ...
 }
 ```
-
-#blog

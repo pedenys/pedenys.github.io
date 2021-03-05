@@ -4,7 +4,7 @@ date: 2020-07-15
 author: pedenys
 excerpt: Print local and remote branches in terminal
 ---
-Depuis le repo : 
+From the git repository :
 
 ```bash
 # show local and remote branches
