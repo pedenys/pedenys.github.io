@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="About me page" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <meta name="theme-color" content="#8ecaa1" />
+    <title>pedenys</title>
+  </head>
+
+  <style>
+    :root {
+      --hoverColor: #007f00;
+    }
+    html {
+      font-size: 62.5%;
+      height: 100%;
+    }
+    body {
+      color: #333;
+      font-size: 1.6rem;
+      font-family: "Space Mono", monospace;
+
+      margin: 0;
+      padding: 0;
+
+      height: 100%;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100%;
+
+      margin: 0 auto;
+      padding: 0 2rem;
+
+      max-width: 800px;
+    }
+    h1,
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      font-size: 5rem;
+      margin-bottom: 10px;
+      line-height: 40px;
+      word-spacing: -10px;
+    }
+    h2 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.8rem;
+    }
+    a {
+      font-weight: bold;
+      color: black;
+      text-decoration: none;
+      border-bottom: 1px solid black;
+    }
+    a:hover {
+      color: var(--hoverColor);
+      border-bottom: 1px solid var(--hoverColor);
+    }
+    li {
+      font-size: 1.6rem;
+      float: left;
+      list-style: square;
+    }
+    li:first-of-type {
+      margin-right: 4rem;
+    }
+    #circle-container {
+      position: absolute;
+      bottom: 3px;
+      right: 6px;
+
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+    }
+
+    figure {
+      margin: 0;
+      margin-bottom: 2rem;
+    }
+    figure blockquote {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+    figure blockquote p::before {
+      content: "« ";
+    }
+    figure blockquote p::after {
+      content: " »";
+    }
+    figure figcaption {
+      font-size: 1.05rem;
+    }
+
+    @media screen and (max-width: 400px) {
+      h1 {
+        font-size: 3.2rem;
+        margin-bottom: 10px;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+  <body>
+    <main>
+      <figure>
+        <blockquote>
+          <p>Ruhe, GröBe, Sonnenlicht [Calme, grandeur, soleil]</p>
+        </blockquote>
+        <figcaption>
+          Friedrich Nietzsche, devise à trois lettres (R.G.S) pour son rêve
+          d'instaurer un jardin épicurien en Engandinex
+        </figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Chaque fois qu’on a lu l’un à la suite de l’autre deux romans
+            allemands, on est obligé de résoudre une intégrale pour maigrir
+          </p>
+          <figcaption>
+            Robert Musil, «&nbsp;Der mathematische Mensch&nbsp;»,
+            <cite>Gesammelte Werke</cite>
+          </figcaption>
+        </blockquote>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Pour dire les choses sans détour et en deux mots : dans l’état
+            actuel de la société, le bonheur n’est possible que pour les
+            artistes et les voleurs
+          </p>
+        </blockquote>
+        <figcaption>
+          William Morris, <cite>L'Art : Idéal socialiste</cite>
+        </figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Les Pythagoriens font le bien certain et finy, le mal infiny et
+            incertain.
+          </p>
+        </blockquote>
+        <figcaption>Michel de Montaigne, <cite>Les Essais</cite></figcaption>
+      </figure>
+      <figure>
+        <blockquote
+          cite="https://twitter.com/InternetHippo/status/1454488859098509317?s=20"
+        >
+          <p>
+            i rebel against capitalism by shaking my head and making a disgusted
+            face when i order Products online
+          </p>
+        </blockquote>
+        <figcaption>@InternetHippo</figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>Moi, je déteste les gens qui se suicident</p>
+        </blockquote>
+        <figcaption>Yukio Mishima, dans un article sur Akutagawa</figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Qu’avons-nous besoin de socialiser les banques et les fabriques ?
+            Nous socialisons les hommes…
+          </p>
+        </blockquote>
+        <figcaption>Hitler</figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Ce n’est vraiment pas la peine d’invoquer la richesse concrète du
+            sensible si c’est pour en faire un principe abstrait
+          </p>
+        </blockquote>
+        <figcaption>
+          Gilles Deleuze, <cite>Dialogues</cite> à propos de la réception de
+          Hume par l'histoire de la philosophie
+        </figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Ils étaient mauvais comme des couteaux qui coupent tout de suite
+            profond
+          </p>
+        </blockquote>
+        <figcaption>
+          Robert Musil, «&nbsp;La Portugaise&nbsp;», <cite>Trois femmes</cite>
+        </figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Je crois que l’esprit peut être profané de façon permanente par
+            l’habitude de s’occuper de choses insignifiantes, de sorte que nos
+            pensées en sortiront teintées d’insignifiance
+          </p>
+        </blockquote>
+        <figcaption>
+          Henry David Thoreau, <cite>La vie sans principe</cite>
+        </figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Je ne peux pas nier que la méfiance envers le goût de notre époque
+            se soit élevée chez moi à une hauteur qui est peut-être blâmable.
+            Voir tous les jours comment des gens obtient le nom de génie, comme
+            les cloportes celui de mille-pattes, non pas parce qu’ils ont autant
+            de pattes, mais parce que la plupart des gens ne veulent pas compter
+            jusqu’à quatorze, a fait que je ne crois plus personne sans examen
+          </p>
+        </blockquote>
+        <figcaption>
+          Georg Christoph Lichtenberg, <cite>Sudelbücher</cite>
+        </figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            [Les journalistes] sont simultanément les héritiers de
+            l’encyclopédie et du cirque […] La cuisine des médias nous sert
+            quotidiennement un plat unique de réalité avec d’innombrables
+            ingrédients, qui ont pourtant chaque jour le même goût
+          </p>
+        </blockquote>
+        <figcaption>
+          Peter Sloterdijk, <cite>Critique de la raison cynique</cite>
+        </figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Lorsque quelqu’un se conduit comme une bête, il dit : on n’est tout
+            de même qu’un homme ! Mais, lorsqu’il est traité comme une bête, il
+            dit : on est tout de même un homme
+          </p>
+        </blockquote>
+        <figcaption>Karl Kraus</figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            N’est-ce pas, à ton avis, la pire des sottises de pleurer de n’avoir
+            pas vécu il y a mille ans ? Il est tout aussi stupide de pleurer
+            parce que dans mille ans on ne sera plus en vie
+          </p>
+        </blockquote>
+        <figcaption>
+          Sénèque, <cite>Lettres à Lucilius</cite> (il y a deux mille ans)
+        </figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Consacrer sa vie à la découverte de la divinité de la nature ou à
+            manger des huîtres, ces deux entreprises n’auront-elles pas des
+            résultats très différents ?
+          </p>
+        </blockquote>
+        <figcaption>Henry David Thoreau, <cite>Journal</cite></figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Rendre l’homme capable de grandes choses, bien qu’il soit un porc,
+            tel est le problème
+          </p>
+        </blockquote>
+        <figcaption>
+          Robert Musil, <cite>L'homme sans qualités</cite>
+        </figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>Quand les mendiants meurent, il n'apparaît pas de comètes.</p>
+        </blockquote>
+        <figcaption>William Shakespeare, <cite>Jules César</cite></figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Hume saw that the danger of “a delicate sense of morals”, especially
+            if accompanied by a “splenetic temper,” is that it can give us “a
+            disgust of the world” and a sense of indignation. Put simply, to
+            anyone with high moral standards, the world seems a sorry and
+            immoral place. This, however, ultimately undermines the sympathy
+            toward our fellow human beings which morality depends upon. So “the
+            sentiments of those, who are inclined to think favourably of
+            mankind, are more advantageous to virtue, than the contrary
+            principles, which give us a mean opinion of our nature.
+          </p>
+        </blockquote>
+        <figcaption>
+          Julian Baggini,
+          <cite
+            >The Great Guide: What David Hume Can Teach Us about Being Human and
+            Living Well</cite
+          >
+        </figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Ne vous inquiétez pas trop d’obtenir de nouvelles choses, que ce
+            soient des vêtements ou des amis. Tournez les anciens, retournez
+            vers eux. Les choses ne changent pas, c’est nous qui changeons.
+            Vendez vos habits, gardez vos pensées
+          </p>
+        </blockquote>
+        <figcaption>Henry David Thoreau, <cite>Walden</cite></figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>Poor child of Doubt and Death, whose hope is built on reeds</p>
+        </blockquote>
+        <figcaption>
+          Lord Byron, <cite>Child Harold's Pilgrimage</cite>
+        </figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Lorsque la peur de favoriser les desseins des hommes de pouvoir est
+            poussée jusqu’au refus systématique de parler et d’entendre parler
+            d’une quelconque forme de vérité ou de rationalité […], les hommes
+            de pouvoir ont justement d’excellentes raisons d’être optimistes
+          </p>
+        </blockquote>
+        <figcaption>
+          Jacques Bouveresse, <cite>Rationalité et cynisme</cite>
+        </figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            C’est vous qui vous égarez dans les sūtra, non les sūtra qui vous
+            égarent
+          </p>
+        </blockquote>
+        <figcaption>Dōgen</figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>
+            Il n’y a pas de tâche plus herculéenne que d’élaborer une pensée sur
+            cette vie, puis de l’exprimer
+          </p>
+        </blockquote>
+        <figcaption>Henry David Thoreau, <cite>Journal</cite></figcaption>
+      </figure>
+      <figure>
+        <blockquote>
+          <p>Nous autres nains malins</p>
+        </blockquote>
+        <figcaption>Friedrich Nietzsche, <cite>Aurore</cite></figcaption>
+      </figure>
+      <!-- Color switcher -->
+      <div id="circle-container" onclick="handleClickOnColor()">
+        <svg height="45" width="50">
+          <circle
+            id="circle"
+            cx="25"
+            cy="25"
+            r="15"
+            stroke="black"
+            stroke-width="3"
+            fill=""
+          />
+        </svg>
+      </div>
+    </main>
+    <script src="./colorPicker.js"></script>
+  </body>
+</html>
