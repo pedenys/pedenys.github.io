@@ -1,12 +1,14 @@
-# About me
+# pedenys.github.io
+
+## About
 
 Plain old index.html file.
 
-## Raison d'être
-
-None, another boring about me page.
-
 ## To do
 
-- [ ] add Parcel for fun
-- [ ] French version
+- [ ] try mvp.css
+- [ ] content update
+
+## Inspirations
+
+- https://www.kloh.ch
