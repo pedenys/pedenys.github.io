@@ -6,9 +6,6 @@ Plain old index.html file.
 
 ## To do
 
-- [ ] try mvp.css
-- [ ] content update
+- [ ] move to 11ty for markdown
+- [ ] link to other websites
 
-## Inspirations
-
-- https://www.kloh.ch
