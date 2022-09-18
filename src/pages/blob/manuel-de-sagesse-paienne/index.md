@@ -1,0 +1,10 @@
+---
+title: Manuel de sagesse païenne
+date: "2022-01-09T18:22:00.284Z"
+description: "Souvenir du livre <b>Manuel de sagesse païenne</b> de Thibault Isabel"
+layout: ./../../../layouts/blogPost.layout.astro
+--- 
+
+Que les valeurs chrétiennes nous soient devenues si odieuses que n'importe quel livre de supermarché parvienne à en produire la critique "en bonnet difforme" en dit long sur l'état de la chrétienté française. Pas que ça importe, c'est le dogmatisme qui est plaisant et puissant dans le catholicisme, pas sa mièvrerie vaticarnavalesque. Néanmoins, derrière le creux des formules d'Isabel (pas catholique celle-ci) surnage une soupe pas si mauvaise, qui renvoie dans ses pénates l'idéalisme abstrait du divin Platon sans s'extasier pour autant sur le virilisme stoïcien (lequel ne déméritait pas sur le sujet des abstractions). 
+
+Mine de rien, pour une vulgarisation, le tour d'esprit vaut la peine d'être noté, quand bien même il irait chercher dans la "sagesse asiatique" (la confucianisme) les opinions conservatrices qu'il ne peut faire dire aux badauds Romains. Évidemment, ça coince sur les chapitres de la mort, où toute la morbidité des Antiques est mise sous le tapis pour en revenir au simple culte familial, à l'instinct de survivance par la procréation et la communauté (on appréciera la référence innocente à Alain de Benoist). Et de se permettre même une petite tape sur le nez des critiques faciles du panthéisme comme matérialisme athée qui s'ignore et s'illusionne. Rien de plus utile quand on ne croit plus que l'absurdité de l'existence et de toutes les existences n'est pas un argument contre elle(s), c'est l'air frais qui rentre à nouveau. On finirait presque par s'attacher à ce sensualisme magique à la Gioradano Bruno, couronné des vertus miraculeuses de la biologie, et qui sent un peu le bois sec.

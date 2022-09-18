@@ -1,0 +1,61 @@
+---
+import HpLayout from "../layouts/hp.layout.astro";
+---
+
+<HpLayout>
+  <main>
+    <img src="./avatar.jpg" id="avatar" />
+    <div>
+      <p>
+        Après quelques années passées dans les <a
+          href="http://lepetitnietzsche.fr/"
+          about="lien vers le site lepetitnietzsche.fr"
+          target="_blank">Humanités</a
+        > et les <a
+          href="https://archinfo24.hypotheses.org/3262"
+          about="lien vers un article concernant l'ubérisation d'internet"
+          target="_blank">Humanités numériques</a
+        >, je suis devenu développeur — en attendant la prochaine mutation.
+      </p>
+
+      <p>
+        J'aime la philosophie continentale, la campagne, manger et les belles
+        choses (mais pas manger de belles choses).
+      </p>
+    </div>
+  </main>
+</HpLayout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    min-heigth: 100vh;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    margin: 2rem auto;
+    filter: var(--filterEffect);
+  }
+
+  main a {
+    font-weight: bold;
+  }
+
+  @media (min-width: 638px) {
+    main {
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      margin-top: calc(50vh - 220px);
+      max-width: 800px;
+      margin-inline: auto;
+    }
+    img {
+      margin-left: 2rem;
+    }
+  }
+</style>

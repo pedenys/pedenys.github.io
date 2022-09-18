@@ -1,0 +1,33 @@
+<script>
+  import "../scripts/colorPicker";
+</script>
+
+<div id="circle-container">
+  <svg height="
+  45" width="50">
+    <circle
+      id="circle"
+      cx="25"
+      cy="25"
+      r="15"
+      stroke="black"
+      stroke-width="3"
+      fill=""
+      style="fill: rgb(249, 240, 193);"></circle>
+  </svg>
+</div>
+
+<style>
+  :root {
+    --hoverColor: #007f00;
+  }
+  #circle-container {
+    position: absolute;
+    bottom: 3px;
+    right: 6px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+  }
+</style>

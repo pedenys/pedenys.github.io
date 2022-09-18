@@ -1,23 +1,18 @@
 {
-  "name": "pedenys.github.io",
-  "version": "1.0.0",
-  "description": "Plain old index.html file.",
-  "main": "colorPicker.js",
+  "name": "@example/basics",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "dev": "live-server"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pedenys/pedenys.github.io.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pedenys/pedenys.github.io/issues"
-  },
-  "homepage": "https://github.com/pedenys/pedenys.github.io#readme",
-  "devDependencies": {
-    "live-server": "^1.2.1"
+  "dependencies": {
+    "@astrojs/alpinejs": "^0.1.2",
+    "@types/alpinejs": "^3.7.0",
+    "alpinejs": "^3.10.3",
+    "astro": "^1.2.1"
   }
 }
