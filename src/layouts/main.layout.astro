@@ -51,11 +51,12 @@ const currentPageIsBlogPost = Astro.url.pathname.includes("blob/");
         color: black;
       }
 
-      nav a#go-back {
-        padding-top: 3px;
-        margin-right: 10px;
+      nav a#go-back_arrow {
+        /* padding-top: 3px;
+        margin-right: 10px; */
         text-decoration: none;
         color: #111;
+        transition: all ease-in 250ms;
       }
     </style>
   </head>
@@ -63,16 +64,17 @@ const currentPageIsBlogPost = Astro.url.pathname.includes("blob/");
   <body>
     <nav>
       <div>
-        {
-          currentPageIsBlogPost && (
-            <a id="go-back" href="/blob">
-              ←
-            </a>
-          )
-        }
         <a href="/">pedenys</a>
       </div>
-      <a href="https://twitter.com/_pedenys_">🐦</a>
+      {
+        currentPageIsBlogPost ? (
+          <a id="go-back_arrow" href="/blob">
+            ←
+          </a>
+        ) : (
+          <a href="https://twitter.com/_pedenys_">🐦</a>
+        )
+      }
     </nav>
     <slot />
     <ColorSwitch />
@@ -110,6 +112,10 @@ const currentPageIsBlogPost = Astro.url.pathname.includes("blob/");
 
       p {
         margin-bottom: 1rem;
+      }
+
+      p,
+      li {
         font-weight: 300;
         color: #111;
       }
