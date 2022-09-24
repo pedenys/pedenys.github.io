@@ -45,7 +45,7 @@ const Posts2012 = posts.filter((post) =>
 ---
 
 <Mainlayout>
-  <section>
+  <div>
     <Posts posts={Posts2022} />
     <Posts posts={Posts2021} />
     <Posts posts={Posts2020} />
@@ -57,10 +57,12 @@ const Posts2012 = posts.filter((post) =>
     <Posts posts={Posts2014} />
     <Posts posts={Posts2013} />
     <Posts posts={Posts2012} />
-  </section>
+  </div>
 </Mainlayout>
 <style>
-  section {
+  div {
+    margin: 0 auto;
     margin-top: 2rem;
+    max-width: 800px;
   }
 </style>
