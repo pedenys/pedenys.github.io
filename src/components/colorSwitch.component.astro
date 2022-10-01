@@ -12,15 +12,11 @@
       r="15"
       stroke="black"
       stroke-width="3"
-      fill=""
-      style="fill: rgb(249, 240, 193);"></circle>
+      fill="rgb(249, 240, 193)"></circle>
   </svg>
 </div>
 
 <style>
-  :root {
-    --hoverColor: #007f00;
-  }
   #circle-container {
     position: fixed;
     bottom: 3px;
@@ -29,6 +25,9 @@
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+  }
+  #circle-container circle {
+    fill: var(--hoverColor);
   }
   @media (min-width: 638px) {
     #circle-container {

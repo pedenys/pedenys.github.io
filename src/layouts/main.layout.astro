@@ -80,9 +80,34 @@ const currentPageIsBlogPost = Astro.url.pathname.includes("blob/");
     <ColorSwitch />
     <style is:global>
       :root {
-        --tintColor: rgb(176, 209, 179); /* #B0D1B3 */
-        --hoverColor: green;
-        --filterEffect: "none";
+        --tintColor: #c0eccc;
+        --hoverColor: #007f00;
+        --filterEffect: none;
+        --fillColor: #c0eccc;
+      }
+      [data-theme="green"] {
+        --tintColor: #c0eccc;
+        --hoverColor: #007f00;
+        --filterEffect: none;
+        --fillColor: #c0eccc;
+      }
+      [data-theme="yellow"] {
+        --tintColor: #f9f0c1;
+        --hoverColor: #877800;
+        --filterEffect: hue-rotate(300deg);
+        --fillColor: #f9f0c1;
+      }
+      [data-theme="blue"] {
+        --tintColor: #a5c8e4;
+        --hoverColor: #00007f;
+        --filterEffect: hue-rotate(90deg);
+        --fillColor: #a5c8e4;
+      }
+      [data-theme="red"] {
+        --tintColor: #f6a8a6;
+        --hoverColor: #610d0a;
+        --filterEffect: hue-rotate(220deg);
+        --fillColor: #f6a8a6;
       }
 
       body {
