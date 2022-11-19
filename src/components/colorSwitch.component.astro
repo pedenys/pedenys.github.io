@@ -1,0 +1,34 @@
+<script>
+  import "../scripts/colorPicker";
+</script>
+
+<div id="circle-container">
+  <svg height="
+  45" width="50">
+    <circle
+      id="circle"
+      cx="25"
+      cy="25"
+      r="15"
+      stroke="black"
+      stroke-width="3"
+      fill="rgb(249, 240, 193)"></circle>
+  </svg>
+</div>
+
+<style>
+  #circle-container {
+    transform: scale(0.6) translateY(3px);
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+  }
+  #circle-container circle {
+    fill: var(--hoverColor);
+  }
+  @media (min-width: 638px) {
+    #circle-container {
+      transform: scale(0.8) translateY(1px);
+    }
+  }
+</style>

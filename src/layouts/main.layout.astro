@@ -1,0 +1,158 @@
+---
+import ColorSwitch from "../components/colorSwitch.component.astro";
+const currentPageIsBlogPost = Astro.url.pathname.includes("blob/");
+---
+
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="About me page" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <meta name="theme-color" content="#8ecaa1" />
+    <title>pedenys</title>
+
+    <style>
+      nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      nav div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      nav a {
+        font-weight: 700;
+        text-decoration: none;
+        color: black;
+      }
+
+      nav a#go-back_arrow {
+        /* padding-top: 3px;
+        margin-right: 10px; */
+        text-decoration: none;
+        color: #111;
+        transition: all ease-in 250ms;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div>
+        <a href="/">pedenys</a>
+      </div>
+      {
+        currentPageIsBlogPost ? (
+          <a id="go-back_arrow" href="/blob">
+            ←
+          </a>
+        ) : (
+          <ColorSwitch />
+        )
+      }
+    </nav>
+    <slot />
+    <style is:global>
+      :root {
+        --tintColor: #c0eccc;
+        --hoverColor: #007f00;
+        --filterEffect: none;
+        --fillColor: #c0eccc;
+      }
+      [data-theme="green"] {
+        --tintColor: #c0eccc;
+        --hoverColor: #007f00;
+        --filterEffect: none;
+        --fillColor: #c0eccc;
+      }
+      [data-theme="yellow"] {
+        --tintColor: #f9f0c1;
+        --hoverColor: #877800;
+        --filterEffect: hue-rotate(300deg);
+        --fillColor: #f9f0c1;
+      }
+      [data-theme="blue"] {
+        --tintColor: #a5c8e4;
+        --hoverColor: #00007f;
+        --filterEffect: hue-rotate(90deg);
+        --fillColor: #a5c8e4;
+      }
+      [data-theme="red"] {
+        --tintColor: #f6a8a6;
+        --hoverColor: #610d0a;
+        --filterEffect: hue-rotate(220deg);
+        --fillColor: #f6a8a6;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+          segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
+          arial, sans-serif;
+        background-color: var(--tintColor);
+        margin: 1rem;
+        font-size: 22px;
+        line-height: 1.75rem;
+      }
+
+      code,
+      kbd,
+      pre,
+      samp {
+        font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+          "Courier New", monospace;
+      }
+
+      h1,
+      h2,
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      p,
+      li {
+        font-weight: 300;
+        color: #111;
+      }
+
+      a {
+        color: var(--hoverColor);
+      }
+
+      @media (min-width: 638px) {
+        body {
+          margin: 3rem 4rem;
+        }
+      }
+    </style>
+  </body>
+</html>

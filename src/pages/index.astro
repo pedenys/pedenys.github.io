@@ -1,0 +1,86 @@
+---
+import HpLayout from "../layouts/hp.layout.astro";
+---
+
+<HpLayout>
+  <main>
+    <img src="./avatar.jpg" id="avatar" />
+    <div>
+      <p>
+        Ancien des <a
+          href="http://lepetitnietzsche.fr/"
+          about="lien vers le site lepetitnietzsche.fr"
+          target="_blank">Humanités</a
+        > et des <a
+          href="https://isidore.science/document/10670/1.au5719"
+          about="lien vers un article traitant du phénoméène d'ubérisation sur internet"
+          target="_blank">Humanités numériques</a
+        >, je suis maintenant développeur.
+      </p>
+
+      <p>
+        J'aime la culture classique, la campagne et manger («&nbsp;Ben oui,
+        c'est un plaisir de manger&nbsp;» — Obélix).
+      </p>
+      <ul>
+        <li>
+          <a href="https://github.com/pedenys" target="_blank" class="github"
+            >GitHub</a
+          >
+        </li><li>
+          <a
+            href="https://twitter.com/_pedenys_"
+            target="_blank"
+            class="twitter">Twitter</a
+          >
+        </li><li>
+          <a
+            href="https://www.last.fm/user/pedenys"
+            target="_blank"
+            class="lastfm">Last.fm</a
+          >
+        </li>
+      </ul>
+    </div>
+  </main>
+</HpLayout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    min-heigth: 100vh;
+  }
+
+  img {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    margin: 2rem auto;
+    filter: var(--filterEffect);
+  }
+
+  main a {
+    font-weight: bold;
+  }
+
+  main ul {
+    padding-left: 1rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  @media (min-width: 638px) {
+    main {
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      margin-top: calc(50vh - 220px);
+      max-width: 800px;
+      margin-inline: auto;
+    }
+    img {
+      margin-left: 2rem;
+    }
+  }
+</style>
