@@ -72,12 +72,11 @@ const currentPageIsBlogPost = Astro.url.pathname.includes("blob/");
             ←
           </a>
         ) : (
-          <a href="https://twitter.com/_pedenys_">🐦</a>
+          <ColorSwitch />
         )
       }
     </nav>
     <slot />
-    <ColorSwitch />
     <style is:global>
       :root {
         --tintColor: #c0eccc;
