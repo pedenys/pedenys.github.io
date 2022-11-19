@@ -7,21 +7,40 @@ import HpLayout from "../layouts/hp.layout.astro";
     <img src="./avatar.jpg" id="avatar" />
     <div>
       <p>
-        Après quelques années passées dans les <a
+        Ancien des <a
           href="http://lepetitnietzsche.fr/"
           about="lien vers le site lepetitnietzsche.fr"
           target="_blank">Humanités</a
-        > et les <a
+        > et des <a
           href="https://archinfo24.hypotheses.org/3262"
           about="lien vers un article concernant l'ubérisation d'internet"
           target="_blank">Humanités numériques</a
-        >, je suis devenu développeur — en attendant la prochaine mutation.
+        >, je suis maintenant développeur.
       </p>
 
       <p>
-        J'aime la philosophie continentale, la campagne, manger et les belles
-        choses (mais pas manger de belles choses).
+        J'aime la culture classique, la campagne et manger («&nbsp;Ben oui,
+        c'est un plaisir de manger&nbsp;» — Obélix).
       </p>
+      <ul>
+        <li>
+          <a href="https://github.com/pedenys" target="_blank" class="github"
+            >GitHub</a
+          >
+        </li><li>
+          <a
+            href="https://twitter.com/_pedenys_"
+            target="_blank"
+            class="twitter">Twitter</a
+          >
+        </li><li>
+          <a
+            href="https://www.last.fm/user/pedenys"
+            target="_blank"
+            class="lastfm">Last.fm</a
+          >
+        </li>
+      </ul>
     </div>
   </main>
 </HpLayout>
@@ -43,6 +62,12 @@ import HpLayout from "../layouts/hp.layout.astro";
 
   main a {
     font-weight: bold;
+  }
+
+  main ul {
+    padding-left: 1rem;
+    display: flex;
+    gap: 2rem;
   }
 
   @media (min-width: 638px) {
