@@ -26,7 +26,7 @@ function updateMetaThemeColor(theme: ColorTheme) {
 function handleClickOnColor() {
   const currentTheme = document.documentElement.getAttribute("data-theme");
 
-  // green yellow blue red
+  // order : green yellow blue red
   let nextTheme: ColorTheme = "green";
   if (!currentTheme || currentTheme === "green") {
     nextTheme = "yellow";
@@ -56,13 +56,9 @@ function addListener() {
       ?.addEventListener("click", function () {
         handleClickOnColor();
       });
-
-    // clearInterval(addListenerInterval);
   }
 }
 
-// const addListenerInterval = setInterval(() => {
 addListener();
-// }, 100);
 
 export {};
