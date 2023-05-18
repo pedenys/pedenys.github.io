@@ -148,6 +148,17 @@ const currentPageIsBlogPost = Astro.url.pathname.includes("blob/");
         color: var(--hoverColor);
       }
 
+      section.post blockquote p:before {
+        content: "«\00a0";
+      }
+      section.post blockquote p:after {
+        content: "\00a0»";
+      }
+      section.post img {
+        border: 3px double var(--hoverColor);
+        width: 100%;
+      }
+
       @media (min-width: 638px) {
         body {
           margin: 3rem 4rem;
