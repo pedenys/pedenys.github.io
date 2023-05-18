@@ -4,11 +4,15 @@ import Posts from "../components/posts.component.astro";
 import type { Post as PostType } from "../types/post.type";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob("./blob/**/*.{md,mdx}")).sort(
+const posts = (await Astro.glob("./posts/**/*.{md,mdx}")).sort(
   (a, b) =>
     new Date(b.frontmatter.date).valueOf() -
     new Date(a.frontmatter.date).valueOf()
 ) as PostType[];
+
+const Posts2023 = posts.filter((post) =>
+  post.frontmatter.date.includes("2023")
+);
 const Posts2022 = posts.filter((post) =>
   post.frontmatter.date.includes("2022")
 );
@@ -46,6 +50,7 @@ const Posts2012 = posts.filter((post) =>
 
 <Mainlayout>
   <div>
+    <Posts posts={Posts2023} />
     <Posts posts={Posts2022} />
     <Posts posts={Posts2021} />
     <Posts posts={Posts2020} />
