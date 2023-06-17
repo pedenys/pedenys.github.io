@@ -45,10 +45,15 @@ const { posts } = Astro.props;
     font-size: 24px;
   }
 
+  ul {
+    font-size: 18px;
+  }
+
   time {
     font-size: 14px;
     white-space: nowrap;
   }
+
   code {
     display: inline-block;
     font-size: 12px;
@@ -58,5 +63,11 @@ const { posts } = Astro.props;
     color: var(--tintColor);
     background-color: var(--hoverColor);
     border-radius: 50px;
+  }
+
+  @media (min-width: 638px) {
+    code {
+      font-size: 10px;
+    }
   }
 </style>
