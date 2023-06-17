@@ -2,6 +2,7 @@
 title: Sociétés Services Utilités
 date: "2020-02-08T09:11:00.284Z"
 description: "Souvenir du livre <b>Sociétés Services Utilités</b> de P.-D Huygue"
+tag: livre
 layout: ./../../../layouts/blogPost.layout.astro
 ---
 

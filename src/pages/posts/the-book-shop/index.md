@@ -2,6 +2,7 @@
 title: The Bookshop
 date: "2020-10-03T09:25:00.284Z"
 description: "Souvenir du film <b>The Book Shop</b> d'Isabel Coixet"
+tag: film
 layout: ./../../../layouts/blogPost.layout.astro
 ---
 

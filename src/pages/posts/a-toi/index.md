@@ -2,6 +2,7 @@
 title: À toi
 date: "2020-08-28T17:54:00.284Z"
 description: "Souvenir du livre <b>À toi</b> de Kodo Sawaki"
+tag: livre
 layout: ./../../../layouts/blogPost.layout.astro
 ---
 

@@ -2,6 +2,7 @@
 title: Les Choses
 date: "2016-01-25T09:38:00.284Z"
 description: "Souvenir du livre <b>Les Choses</b> de Georges Perec"
+tag: livre
 layout: ./../../../layouts/blogPost.layout.astro
 ---
 

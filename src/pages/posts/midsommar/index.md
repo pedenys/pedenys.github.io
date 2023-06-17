@@ -2,6 +2,7 @@
 title: Midsommar
 date: "2020-07-02T16:38:00.284Z"
 description: "Souvenir du film <b>Midsommar</b> d'Ari Aster"
+tag: film
 layout: ./../../../layouts/blogPost.layout.astro
 ---
 

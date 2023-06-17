@@ -2,6 +2,7 @@
 title: Confessions d'un jeune Anglais
 date: "2020-08-12T11:01:00.284Z"
 description: "Souvenir du livre <b>Confessions d'un jeune Anglais</b> de Georges Moore"
+tag: livre
 layout: ./../../../layouts/blogPost.layout.astro
 ---
 

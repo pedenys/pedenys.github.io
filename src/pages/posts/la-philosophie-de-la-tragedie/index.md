@@ -2,6 +2,7 @@
 title: La philosophie de la tragédie
 date: "2020-06-21T10:12:00.284Z"
 description: "Souvenir du livre <b>La philosophie de la tragédie</b> de Léon Chestov"
+tag: livre
 layout: ./../../../layouts/blogPost.layout.astro
 ---
 

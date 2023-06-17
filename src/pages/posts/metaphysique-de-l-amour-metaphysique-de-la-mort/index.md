@@ -2,6 +2,7 @@
 title: Métaphysique de l'amour, métaphysique de la mort
 date: "2020-08-28T17:54:00.284Z"
 description: "Souvenir du livre <b>Métaphysique de l'amour, métaphysique de la mort</b> d'Arthur Schopenhauer"
+tag: livre
 layout: ./../../../layouts/blogPost.layout.astro
 ---
 

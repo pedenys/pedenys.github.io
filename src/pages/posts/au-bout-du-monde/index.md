@@ -2,6 +2,7 @@
 title: Au bout du monde
 date: "2019-11-19T09:25:03.284Z"
 description: "Souvenir du film <b>Au bout du monde</b> de Kiyoshi Kurosawa"
+tag: film
 layout: ./../../../layouts/blogPost.layout.astro
 ---
 

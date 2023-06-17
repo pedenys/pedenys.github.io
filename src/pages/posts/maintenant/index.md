@@ -2,9 +2,9 @@
 title: Maintenant
 date: "2016-01-25T09:38:00.284Z"
 description: "Souvenir du livre <b>Maintenant</b> d'Arthur Cravan"
+tag: livre
 layout: ./../../../layouts/blogPost.layout.astro
---- 
-
+---
 
 Cravan a quelque chose d’exaspérant dans ses charmes. Sa vie et son personnage ont tout fait de ses écrits qui, sans eux, seraient des jeux d’adolescent rageur. Là où la petite furie des hormones insulte les maîtres, Cravan semble ne vivre qu’aux dépens de ceux qu’il insulte. Gide, tête de turc finement choisie (protestant, supposé immoraliste, pose et prose bourgeoise, snobisme de la « société des auteurs »), fait de lui un cajoleur à revers de premier choix. Son style salon sent le wit anglais et ses pastiches. Lorsqu’il est vulgaire, une fausse retenue l’accompagne et on ne sait jamais réellement si ses imprécations contre l’Art sont authentiques. Fait-il partie de ces littérateurs qui entrent en littérature pour cracher au visage de ceux qui tentent de la faire ? On ne s’étonne pas que Breton y ait vu un dadaïste, l’esprit de révolution en moins. C’est là où sa figure se rapproche du dandy : il choque pour choquer, comme Baudelaire disant « moi qui suis fils de prêtre ». C’est que la bourgeoisie du XIXe est devenue l’artiste de ce début de siècle. A-t-on trop dé-serrer la bride qui ferme encore la gueule des hommes ?
 

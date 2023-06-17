@@ -2,6 +2,7 @@
 title: La vie de Rembrandt
 date: "2020-06-10T09:08:00.284Z"
 description: "Souvenir du livre <b>La vie de Rembrandt</b> de Kees van Dongen"
+tag: livre
 layout: ./../../../layouts/blogPost.layout.astro
 ---
 

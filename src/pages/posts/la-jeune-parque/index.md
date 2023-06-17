@@ -2,6 +2,7 @@
 title: La Jeune Parque
 date: "2020-05-21T08:48:00.284Z"
 description: "Souvenir du livre <b>La Jeune Parque</b> de Paul Valéry"
+tag: livre
 layout: ./../../../layouts/blogPost.layout.astro
 ---
 
