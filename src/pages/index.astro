@@ -18,9 +18,9 @@ import HpLayout from "../layouts/hp.layout.astro";
         >, je suis maintenant développeur.
       </p>
 
-      <p>J'aime la culture classique.</p>
+      <p>J'aime <a href="/posts">la culture classique</a>.</p>
       <ul>
-        <li>
+        <li class="first">
           <a href="https://github.com/pedenys" target="_blank">GitHub</a>
         </li><li>
           <a href="https://twitter.com/_pedenys_" target="_blank">Twitter</a>
@@ -30,44 +30,51 @@ import HpLayout from "../layouts/hp.layout.astro";
       </ul>
     </div>
   </main>
-</HpLayout>
 
-<style>
-  main {
-    display: flex;
-    flex-direction: column;
-    min-heigth: 100vh;
-  }
-
-  img {
-    border-radius: 50%;
-    width: 220px;
-    height: 220px;
-    margin: 2rem auto;
-    filter: var(--filterEffect);
-  }
-
-  main a {
-    font-weight: bold;
-  }
-
-  main ul {
-    padding-left: 1rem;
-    display: flex;
-    gap: 2rem;
-  }
-
-  @media (min-width: 638px) {
+  <style>
     main {
-      flex-direction: row-reverse;
-      justify-content: center;
-      align-items: center;
-      margin-top: calc(50vh - 220px);
-      max-width: 800px;
-      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      min-heigth: 100vh;
     }
-    img {
-      margin-left: 2rem;
+
+    img#avatar {
+      border-radius: 50%;
+      width: 220px;
+      height: 220px;
+      margin: 2rem auto;
+      filter: var(--filterEffect);
     }
-  }
-</style>
+
+    main a {
+      font-weight: bold;
+    }
+
+    main ul {
+      padding-left: 0rem;
+      display: flex;
+    }
+    main ul li {
+      display: flex;
+      margin-right: 1rem;
+    }
+
+    main ul li:not(.first)::before {
+      content: "\0025AA\00a0 ";
+    }
+
+    @media (min-width: 638px) {
+      main {
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-top: calc(50vh - 220px);
+        max-width: 800px;
+        margin-inline: auto;
+      }
+      img#avatar {
+        margin-left: 2rem;
+      }
+    }
+  </style>
+</HpLayout>

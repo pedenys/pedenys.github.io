@@ -13,7 +13,7 @@ const { posts } = Astro.props;
     <section>
       <h2>{new Date(posts[0].frontmatter.date).getFullYear()}</h2>
       <ul>
-        {posts.map((post) => (
+        {posts.map((post: Post) => (
           <li>
             <a href={post.url}>{post.frontmatter.title}</a>
             <time datetime={post.frontmatter.date}>
@@ -21,10 +21,11 @@ const { posts } = Astro.props;
                 new Date(post.frontmatter.date).toLocaleDateString("fr-fr", {
                   year: "numeric",
                   month: "numeric",
-                  day: "numeric",
+                  // day: "numeric",
                 }) +
                 ")"}
             </time>
+            <code>#{post.frontmatter.tag}</code>
           </li>
         ))}
       </ul>
@@ -36,13 +37,26 @@ const { posts } = Astro.props;
   section {
     margin-top: 3rem;
   }
+
   h2 {
-    text-align: center;
+    /* text-align: center; */
+    margin-left: 40px;
     margin-bottom: 1.7rem;
+    font-size: 24px;
   }
 
   time {
     font-size: 14px;
     white-space: nowrap;
+  }
+  code {
+    display: inline-block;
+    font-size: 12px;
+    padding-inline: 6px;
+    line-height: 0;
+    padding-block: 10px;
+    color: var(--tintColor);
+    background-color: var(--hoverColor);
+    border-radius: 50px;
   }
 </style>
