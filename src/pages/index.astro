@@ -5,7 +5,7 @@ import HpLayout from "../layouts/hp.layout.astro";
 <HpLayout>
   <main>
     <img src="./avatar.jpg" id="avatar" />
-    <div>
+    <div class="mainText">
       <p>
         Passé par les <a
           href="http://lepetitnietzsche.fr/"
@@ -18,7 +18,10 @@ import HpLayout from "../layouts/hp.layout.astro";
         >,&nbsp;je suis maintenant développeur.
       </p>
 
-      <p>J'aime la culture classique et j'écris <a href="/posts">un peu</a>.</p>
+      <p>
+        J'aime la culture classique et <a href="/posts">j'écris</a> un peu avec beaucoup
+        de prétention.
+      </p>
       <ul>
         <li class="first">
           <a href="https://github.com/pedenys" target="_blank">GitHub</a>
@@ -72,6 +75,11 @@ import HpLayout from "../layouts/hp.layout.astro";
         max-width: 800px;
         margin-inline: auto;
       }
+
+      main .mainText {
+        width: 60%;
+      }
+
       img#avatar {
         margin-left: 2rem;
       }
