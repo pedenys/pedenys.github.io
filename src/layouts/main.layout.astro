@@ -59,6 +59,18 @@ const currentPageIsBlogPost = Astro.url.pathname.includes("blob/");
         transition: all ease-in 250ms;
       }
     </style>
+    <script type="text/javascript">
+      /**
+       * Avoid FOUC on page load without breaking JS disabled browsers
+       * many thanks to Lawrence Dol | https://stackoverflow.com/a/21668527/14345634
+       */
+
+      var elm = document.getElementsByTagName("html")[0];
+      elm.style.display = "none";
+      document.addEventListener("DOMContentLoaded", function (event) {
+        elm.style.display = "block";
+      });
+    </script>
   </head>
 
   <body>
