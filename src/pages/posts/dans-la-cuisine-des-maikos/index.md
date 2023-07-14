@@ -2,7 +2,7 @@
 title: Makanai — Dans la cuisine des maiko
 date: "2023-07-04T13:10:58.284Z"
 description: "Souvenir de la série <b>Makanai : Dans la cuisine des maiko</b> de Stéphane Lambert"
-tag: film
+tag: série
 layout: ./../../../layouts/blogPost.layout.astro
 ---
 

@@ -1,6 +1,6 @@
 ---
 import Mainlayout from "../layouts/main.layout.astro";
-import Posts from "../components/posts.component.astro";
+import PostsComponent from "../components/posts.component.astro";
 import type { Post as PostType } from "../types/post.type";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
@@ -50,18 +50,23 @@ const Posts2012 = posts.filter((post) =>
 
 <Mainlayout>
   <div>
-    <Posts posts={Posts2023} />
-    <Posts posts={Posts2022} />
-    <Posts posts={Posts2021} />
-    <Posts posts={Posts2020} />
-    <Posts posts={Posts2019} />
-    <Posts posts={Posts2018} />
-    <Posts posts={Posts2017} />
-    <Posts posts={Posts2016} />
-    <Posts posts={Posts2015} />
-    <Posts posts={Posts2014} />
-    <Posts posts={Posts2013} />
-    <Posts posts={Posts2012} />
+    <PostsComponent posts={posts} />
+    {
+      /*
+    <PostsComponent posts={Posts2023} />
+    <PostsComponent posts={Posts2022} />
+    <PostsComponent posts={Posts2021} />
+    <PostsComponent posts={Posts2020} />
+    <PostsComponent posts={Posts2019} />
+    <PostsComponent posts={Posts2018} />
+    <PostsComponent posts={Posts2017} />
+    <PostsComponent posts={Posts2016} />
+    <PostsComponent posts={Posts2015} />
+    <PostsComponent posts={Posts2014} />
+    <PostsComponent posts={Posts2013} />
+    <PostsComponent posts={Posts2012} />
+     */
+    }
   </div>
 </Mainlayout>
 <style>

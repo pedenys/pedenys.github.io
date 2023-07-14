@@ -4,23 +4,21 @@ import Mainlayout from "../layouts/main.layout.astro";
 
 <!-- https://leerob.io/uses -->
 <Mainlayout>
-  <h1>Uses</h1>
-  <section class="uses">
-    <h2>Hard</h2>
+  <section>
+    <h2>Hardware</h2>
     <ul>
       <li>Mac Book Pro 15' 2018 i7 16 Go</li>
       <li>iPhone 12 64 Go</li>
-      <li>Apple Magic Keyboard (blanc)</li>
-      <li>Apple Magic Mouse (blanche)</li>
+      <li>Apple Magic Keyboard (blanc) | MX Mechanical Mini (noir)</li>
+      <li>Apple Magic Mouse (blanche) | MX Master 3S (noire)</li>
       <li>
         <a href="https://www.amazon.fr/gp/product/B07DHK5DHN"
           >Amazon Basics bras de support</a
         >
       </li>
     </ul>
-  </section>
-  <section>
-    <h2>Soft</h2>
+
+    <h2>Software</h2>
     <ul>
       <li><a href="https://culturedcode.com/things/">Things</a></li>
       <li><a href="https://www.raycast.com/">Raycast</a></li>
@@ -32,10 +30,19 @@ import Mainlayout from "../layouts/main.layout.astro";
     </ul>
   </section>
 </Mainlayout>
+
 <style>
-  h1 {
-    margin-top: 2rem !important;
-    margin-bottom: 1rem !important;
-    text-align: center;
+  section {
+    margin: 0 auto;
+    max-width: 800px;
+    padding-top: 4rem;
+  }
+
+  section ul:first-of-type {
+    margin-bottom: 4rem;
+  }
+
+  h2 {
+    margin-bottom: 1.7rem;
   }
 </style>

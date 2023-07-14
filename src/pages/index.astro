@@ -6,83 +6,81 @@ import HpLayout from "../layouts/hp.layout.astro";
   <main>
     <img src="./avatar.jpg" id="avatar" />
     <div class="mainText">
+      <h2>Salut, c'est mon site</h2>
+      <br />
       <p>
-        Passé par les <a
-          href="http://lepetitnietzsche.fr/"
-          about="lien vers le site lepetitnietzsche.fr"
-          target="_blank">Humanités</a
-        > et les <a
-          href="https://isidore.science/document/10670/1.au5719"
-          about="lien vers un article traitant du phénoméène d'ubérisation sur internet"
-          target="_blank">Humanités numériques</a
-        >,&nbsp;je suis maintenant développeur.
+        Je suis <a href="https://github.com/pedenys" target="_blank"
+          >développeur</a
+        >, légèrement <a href="/uses">tech bro</a> par dessus le marché. Mais j'ai
+        un petit <a href="/posts">journal culturel prétentieux</a> fait maison.
       </p>
-
       <p>
-        J'aime la culture classique et <a href="/posts">j'écris</a> un peu avec beaucoup
-        de prétention.
+        J'aime aussi beaucoup <a
+          href="https://www.last.fm/user/pedenys"
+          target="_blank">la musique</a
+        > et dire <a href="https://twitter.com/pedenys__" target="_blank"
+          >des atrocités</a
+        > (désolé).
       </p>
-      <ul>
-        <li class="first">
-          <a href="https://github.com/pedenys" target="_blank">GitHub</a>
-        </li><li>
-          <a href="https://twitter.com/_pedenys_" target="_blank">Twitter</a>
-        </li><li>
-          <a href="https://www.last.fm/user/pedenys" target="_blank">Last.fm</a>
-        </li>
-      </ul>
     </div>
   </main>
+</HpLayout>
 
-  <style>
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    min-heigth: 100vh;
+    line-height: 31px;
+  }
+
+  img#avatar {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    margin: 2rem auto;
+    filter: var(--filterEffect);
+    border: 3px dashed black;
+  }
+
+  img#avatar:hover {
+    transform: translateX(-10px);
+  }
+
+  main a {
+    font-weight: bold;
+  }
+
+  main ul {
+    padding-left: 0rem;
+    display: flex;
+  }
+  main ul li {
+    display: flex;
+    margin-right: 1rem;
+  }
+
+  main ul li:not(.first)::before {
+    content: "\0025AA\00a0 ";
+  }
+
+  @media (min-width: 638px) {
     main {
-      display: flex;
-      flex-direction: column;
-      min-heigth: 100vh;
+      flex-direction: row-reverse;
+      justify-content: center;
+      align-items: center;
+      margin-top: calc(50vh - 220px);
+      max-width: 800px;
+      margin-inline: auto;
+    }
+
+    main .mainText {
+      width: 60%;
     }
 
     img#avatar {
-      border-radius: 50%;
-      width: 220px;
-      height: 220px;
-      margin: 2rem auto;
-      filter: var(--filterEffect);
+      margin-left: 2rem;
     }
-
-    main a {
-      font-weight: bold;
-    }
-
-    main ul {
-      padding-left: 0rem;
-      display: flex;
-    }
-    main ul li {
-      display: flex;
-      margin-right: 1rem;
-    }
-
-    main ul li:not(.first)::before {
-      content: "\0025AA\00a0 ";
-    }
-
-    @media (min-width: 638px) {
-      main {
-        flex-direction: row-reverse;
-        justify-content: center;
-        align-items: center;
-        margin-top: calc(50vh - 220px);
-        max-width: 800px;
-        margin-inline: auto;
-      }
-
-      main .mainText {
-        width: 60%;
-      }
-
-      img#avatar {
-        margin-left: 2rem;
-      }
-    }
-  </style>
-</HpLayout>
+  }
+</style>

@@ -2,7 +2,7 @@
 title: Le vent se lève
 date: "2020-08-28T17:54:00.284Z"
 description: "Souvenir du film <b>Le vent se lève</b> d'Hayao Miyazaki"
-tag: film
+tag: anime
 layout: ./../../../layouts/blogPost.layout.astro
 ---
 
