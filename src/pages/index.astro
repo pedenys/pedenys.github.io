@@ -6,21 +6,19 @@ import HpLayout from "../layouts/hp.layout.astro";
   <main>
     <img src="./avatar.jpg" id="avatar" />
     <div class="mainText">
-      <h2>Salut, c'est mon site</h2>
+      <br />
+      <h2>🪴</h2>
       <br />
       <p>
-        Je suis <a href="https://github.com/pedenys" target="_blank"
-          >développeur</a
-        >, légèrement <a href="/uses">tech bro</a> par dessus le marché. Mais j'ai
-        un petit <a href="/posts">journal culturel prétentieux</a> fait maison.
+        <a href="https://github.com/pedenys" target="_blank">Développeur</a>,
+        légèrement <a href="/uses">tech bro</a> par dessus le marché. J'écris aussi
+        des
+        <a href="/posts">notes</a> (prétentieuses) sur ce que je lis ou vois.
       </p>
       <p>
-        J'aime aussi beaucoup <a
-          href="https://www.last.fm/user/pedenys"
-          target="_blank">la musique</a
-        > et dire <a href="https://twitter.com/pedenys__" target="_blank"
-          >des atrocités</a
-        > (désolé).
+        J'aime aussi <a href="https://www.last.fm/user/pedenys" target="_blank"
+          >la musique</a
+        >.
       </p>
     </div>
   </main>
@@ -35,17 +33,13 @@ import HpLayout from "../layouts/hp.layout.astro";
   }
 
   img#avatar {
-    cursor: pointer;
+    /* cursor: pointer; */
     border-radius: 50%;
     width: 220px;
     height: 220px;
     margin: 2rem auto;
     filter: var(--filterEffect);
     border: 3px dashed black;
-  }
-
-  img#avatar:hover {
-    transform: translateX(-10px);
   }
 
   main a {

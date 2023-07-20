@@ -10,42 +10,42 @@ const posts = (await Astro.glob("./posts/**/*.{md,mdx}")).sort(
     new Date(a.frontmatter.date).valueOf()
 ) as PostType[];
 
-const Posts2023 = posts.filter((post) =>
-  post.frontmatter.date.includes("2023")
-);
-const Posts2022 = posts.filter((post) =>
-  post.frontmatter.date.includes("2022")
-);
-const Posts2021 = posts.filter((post) =>
-  post.frontmatter.date.includes("2021")
-);
-const Posts2020 = posts.filter((post) =>
-  post.frontmatter.date.includes("2020")
-);
-const Posts2019 = posts.filter((post) =>
-  post.frontmatter.date.includes("2019")
-);
-const Posts2018 = posts.filter((post) =>
-  post.frontmatter.date.includes("2018")
-);
-const Posts2017 = posts.filter((post) =>
-  post.frontmatter.date.includes("2017")
-);
-const Posts2016 = posts.filter((post) =>
-  post.frontmatter.date.includes("2016")
-);
-const Posts2015 = posts.filter((post) =>
-  post.frontmatter.date.includes("2015")
-);
-const Posts2014 = posts.filter((post) =>
-  post.frontmatter.date.includes("2014")
-);
-const Posts2013 = posts.filter((post) =>
-  post.frontmatter.date.includes("2013")
-);
-const Posts2012 = posts.filter((post) =>
-  post.frontmatter.date.includes("2012")
-);
+// const Posts2023 = posts.filter((post) =>
+//   post.frontmatter.date.includes("2023")
+// );
+// const Posts2022 = posts.filter((post) =>
+//   post.frontmatter.date.includes("2022")
+// );
+// const Posts2021 = posts.filter((post) =>
+//   post.frontmatter.date.includes("2021")
+// );
+// const Posts2020 = posts.filter((post) =>
+//   post.frontmatter.date.includes("2020")
+// );
+// const Posts2019 = posts.filter((post) =>
+//   post.frontmatter.date.includes("2019")
+// );
+// const Posts2018 = posts.filter((post) =>
+//   post.frontmatter.date.includes("2018")
+// );
+// const Posts2017 = posts.filter((post) =>
+//   post.frontmatter.date.includes("2017")
+// );
+// const Posts2016 = posts.filter((post) =>
+//   post.frontmatter.date.includes("2016")
+// );
+// const Posts2015 = posts.filter((post) =>
+//   post.frontmatter.date.includes("2015")
+// );
+// const Posts2014 = posts.filter((post) =>
+//   post.frontmatter.date.includes("2014")
+// );
+// const Posts2013 = posts.filter((post) =>
+//   post.frontmatter.date.includes("2013")
+// );
+// const Posts2012 = posts.filter((post) =>
+//   post.frontmatter.date.includes("2012")
+// );
 ---
 
 <Mainlayout>
