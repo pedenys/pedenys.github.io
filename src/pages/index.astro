@@ -4,9 +4,10 @@ import HpLayout from "../layouts/hp.layout.astro";
 
 <HpLayout>
   <main>
-    <img src="./avatar.jpg" id="avatar" />
+    <a href="/quotes">
+      <img src="./avatar.jpg" id="avatar" />
+    </a>
     <div class="mainText">
-      <br />
       <h2>🪴</h2>
       <br />
       <p>
@@ -16,9 +17,9 @@ import HpLayout from "../layouts/hp.layout.astro";
         <a href="/posts">notes</a> (prétentieuses) sur ce que je lis ou vois.
       </p>
       <p>
-        J'aime aussi <a href="https://www.last.fm/user/pedenys" target="_blank"
+        J'aime <a href="https://www.last.fm/user/pedenys" target="_blank"
           >la musique</a
-        >.
+        >. Une citation <a href="/quotes">au hasard</a> pour finir ?
       </p>
     </div>
   </main>
@@ -28,12 +29,17 @@ import HpLayout from "../layouts/hp.layout.astro";
   main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     min-heigth: 100vh;
     line-height: 31px;
   }
 
+  main h2 {
+    text-align: center;
+  }
+
   img#avatar {
-    /* cursor: pointer; */
+    cursor: pointer;
     border-radius: 50%;
     width: 220px;
     height: 220px;
@@ -67,6 +73,10 @@ import HpLayout from "../layouts/hp.layout.astro";
       margin-top: calc(50vh - 220px);
       max-width: 800px;
       margin-inline: auto;
+    }
+
+    main h2 {
+      text-align: inherit;
     }
 
     main .mainText {
