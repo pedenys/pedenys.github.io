@@ -454,6 +454,16 @@ export const quotes = [
       "Notre façon ordinaire c’est d’aller après les inclinations de notre appétit, à gauche, à dextre, contremont, contrebas, selon que le vent des occasions nous emporte : Nous ne pensons ce que nous voulons, et changeons comme cet animal, qui prend la couleur du lieu, où on le couche. Ce que nous avons à cette heure proposé, nous le changeons tantôt, et tantôt encore retournons sur nos pas, ce n’est que branle [instabilité] et inconstance.",
     author: "Michel de Montaigne",
   },
+  {
+    content:
+      "Et le malheureux garçon, devenu vieux avant l'âge, avec ses repas pris sur le pouce et son front plissé par l'inquiétude, va et vient comme un automate - une attestation ambulante de ses propres mots : « Les jours de son bonheur sont révolus depuis longtemps. » Par tous les dieux, je préférerais passer une année entière à creuser un drain avec une pelle et une pioche, à ciel ouvert, en respirant à pleins poumons, plutôt que de vivre dans cette jungle de devoirs stupides et de respectabilités aux lèvres pincées à laquelle conduit l'argent. Pourquoi diable les jours de votre bonheur devraient-ils être derrière vous, si ce n'est que vous avez mené une vie à étouffer tout l'homme naturel qui est en vous ? Pensez-vous que le bonheur n'est rien d'autre qu'un petit feu de paille à vos dix-huit ans ? Ne savez-vous pas que l'âge grandissant, comme une fleur, s'élève toujours vers l'ensoleillement de la joie, de plus en plus radieux, que la Mort, sereine et belle, n'atteint qu'au dernier moment avec une parfaite assurance? Ne savez-vous pas que tout l'effort de votre nature tend vers ce bonheur, si seulement vous pouviez vous abandonner et, l'espace d'un instant, comme un enfant, avoir foi en votre propre mère ? Mais elle le sait et, à moitié amusée, vous regarde courir après vos petites « actions », s'attendant à ce que vous retourniez vers elle à la longue.",
+    author: "Edward Carpenter",
+  },
+  {
+    content:
+      "L'éducation, si elle est transmise convenablement, ne fait pas de l'homme un être caractérisé par des besoins aveugles, en proie à des appétits et à des désirs toujours renouvelés; elle le met en relation avec le monde qui l'entoure. Elle lui permet de tirer du plaisir et de se nourrir de mille choses banales, qui n'apportent ni joie ni subsistance à son frère davantage enfermé et emprisonné. L'un peut passer une heure à s'égayer n'importe où. Dans un champ, dans la rue, dans l'atelier, il voit mille choses dignes d'intérêt. L'autre s'ennuie, il lui faut un jouet - un verre de bière ou une loge à l'opéra. En outre, l'homme instruit, s'il est vraiment cultivé, peut à l'évidence compter sur des savoir-faire supérieurs - il n'a pas à craindre pour l'avenir. L'autre ferait bien de mettre un peu de côté pour se prémunir contre les mauvais jours.",
+    author: "Edward Carpenter",
+  },
 ];
 
 function getRandomNumber(min, max) {
