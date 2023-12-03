@@ -1,0 +1,21 @@
+---
+import "./styles.css";
+// Many thanks to Jesse Couch for the hamburger menu animation (https://codepen.io/designcouch/pen/ExvwPY)
+---
+
+<div id="nav-icon-container">
+  <div id="nav-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<script>
+  document
+    .querySelector("#nav-icon-container")
+    ?.addEventListener("click", function (this: HTMLElement) {
+      this.querySelector("#nav-icon")?.classList.toggle("open");
+    });
+</script>

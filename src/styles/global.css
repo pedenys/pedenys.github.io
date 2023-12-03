@@ -1,0 +1,80 @@
+:root {
+  --background: #000;
+  --accent-1: #111;
+  --accent-2: #333;
+  --accent-3: #444;
+  --accent-4: #666;
+  --accent-5: #888;
+  --accent-6: #999;
+  --accent-7: #eaeaea;
+  --accent-8: #fafafa;
+  --foreground: #fff;
+  --red-1: #f7d4d6;
+  --blue-1: #d3e5ff;
+  --blue-2: #3291ff;
+  --blue-3: #0070f3;
+  --blue-4: #0761d1;
+  --yellow-1: #ffefcf;
+  --violet-1: #d8ccf1;
+  --cyan-1: #aaffec;
+  --cyan-2: #79ffe1;
+  --cyan-3: #50e3c2;
+  --cyan-4: #29bc9b;
+  --highlight-yellow: #fff500;
+}
+
+*::selection {
+  background-color: var(--yellow-1);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--accent-7);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--accent-8);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial,
+    sans-serif;
+  margin: 1rem;
+  font-size: 22px;
+  line-height: 1.75rem;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--cyan-1);
+}
+
+a:visited {
+  color: var(--cyan-1);
+}
+
+/**
+Desktop
+*/
+
+@media (min-width: 638px) {
+  body {
+    margin: 3rem 4rem;
+  }
+}
