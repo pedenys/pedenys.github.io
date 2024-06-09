@@ -1,0 +1,77 @@
+---
+import type { Post, Post as PostType } from "../../types/post.type";
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob("../../pages/posts/**/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+) as PostType[];
+
+const latestPost = posts.slice(0, 5);
+---
+
+<div class="default-bottom-spacing">
+  <h2>Entries</h2>
+  {
+    latestPost.length > 0 && latestPost[0] && (
+      <section>
+        {/* <h3>{new Date(posts[0].frontmatter.date).getFullYear()}</h3> */}
+        <ul>
+          {latestPost.map((post: Post) => (
+            <li>
+              <a href={post.url}>{post.frontmatter.title}</a>
+              <time datetime={post.frontmatter.date}>
+                {"(" +
+                  new Date(post.frontmatter.date).toLocaleDateString("fr-fr", {
+                    year: "numeric",
+                    month: "numeric",
+                    // day: "numeric",
+                  }) +
+                  ")"}
+              </time>
+              <code>#{post.frontmatter.tag}</code>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  <style>
+    section {
+      margin-top: 3rem;
+    }
+
+    h3 {
+      margin-left: 40px;
+      margin-bottom: 1.7rem;
+    }
+
+    ul {
+      font-size: 18px;
+    }
+
+    time {
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    code {
+      display: inline-block;
+      font-size: 12px;
+      padding-inline: 6px;
+      line-height: 0;
+      padding-block: 10px;
+      color: var(--tintColor);
+      background-color: var(--hoverColor);
+      border-radius: 50px;
+    }
+
+    @media (min-width: 638px) {
+      code {
+        font-size: 10px;
+      }
+    }
+  </style>
+</div>

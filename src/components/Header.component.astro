@@ -1,0 +1,40 @@
+<header class="default-bottom-spacing">
+  <div>
+    <p class="name">Pierre-Emmanuel Denys</p>
+    <p class="subtitle grey-1">Disappear here</p>
+  </div>
+  <div class="avatar-container">
+    <img src="/assets/avatar.png" alt="" />
+  </div>
+</header>
+
+<style>
+  header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .name {
+      color: var(--white-1);
+      font-size: 20px;
+
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 19px;
+    }
+
+    .avatar-container {
+      align-self: flex-start;
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+    }
+  }
+</style>
