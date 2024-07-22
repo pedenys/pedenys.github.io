@@ -12,7 +12,9 @@ const latestEntries = entries.slice(0, 5);
 ---
 
 <div class="default-bottom-spacing">
-  <h2>Entries</h2>
+  <a href="#entries" id="entries" class="no-underline-link"
+    ><h2># Entries</h2></a
+  >
   {
     latestEntries.length > 0 && latestEntries[0] && (
       <section>
@@ -43,6 +45,7 @@ const latestEntries = entries.slice(0, 5);
   <style>
     h2 {
       margin-bottom: 14px;
+      font-size: 18px;
     }
     h3 {
       margin-left: 40px;

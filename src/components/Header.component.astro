@@ -1,7 +1,11 @@
 <header class="default-bottom-spacing">
   <div>
-    <p class="name">Pierre-Emmanuel Denys</p>
-    <p class="subtitle grey-1">Disappear here</p>
+    <a id="header__homepage_link" href="/"
+      ><p class="name">Pierre-Emmanuel Denys</p></a
+    >
+    <a href="/quotes" id="header__homepage_tagline"
+      ><p class="subtitle grey-1">Disappear here</p></a
+    >
   </div>
   <div class="avatar-container">
     <img src="/assets/avatar.png" alt="" />
@@ -22,6 +26,12 @@
       font-size: 20px;
 
       margin-bottom: 4px;
+    }
+
+    #header__homepage_link,
+    #header__homepage_tagline {
+      text-decoration: none;
+      cursor: pointer;
     }
 
     .subtitle {

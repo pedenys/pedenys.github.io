@@ -115,7 +115,7 @@ import Header from "../components/Header.component.astro";
         font-size: 22px;
         line-height: 1.75rem;
 
-        border: 2px solid var(--white-1);
+        border: 1px solid var(--white-1);
 
         padding: 16px 16px 0px 16px;
 
@@ -172,10 +172,10 @@ import Header from "../components/Header.component.astro";
         flex-direction: column;
         justify-content: space-between;
 
-        min-height: calc(100vh - 20px);
-
         .content-container {
-          height: 100%;
+          flex-grow: 1;
+          /* Window height minus website container margin-top minus margin-top header & footer */
+          min-height: calc(100vh - (60px + 28px) - (60px + 29px) - 40px - 16px);
         }
       }
 
@@ -183,17 +183,32 @@ import Header from "../components/Header.component.astro";
       section.post blockquote p:before {
         content: "«\00a0";
       }
+
       section.post blockquote p:after {
         content: "\00a0»";
       }
+
       section.post img {
         border: 3px double var(--hoverColor);
         width: 100%;
       }
 
+      section.post p {
+        margin-bottom: 28px;
+        font-size: 18px;
+      }
+
       /* Utility classes */
       .default-bottom-spacing {
         margin-bottom: 28px;
+      }
+
+      .default-top-spacing {
+        margin-top: 28px;
+      }
+
+      .no-underline-link {
+        text-decoration: none;
       }
 
       .default-link {
@@ -211,7 +226,13 @@ import Header from "../components/Header.component.astro";
       /* Desktop */
       @media (min-width: 638px) {
         body {
-          margin: 40px;
+          border: none;
+        }
+        body > div {
+          margin-top: 40px;
+          max-width: 55%;
+          width: 100%;
+          margin-inline: auto;
         }
       }
     </style>
