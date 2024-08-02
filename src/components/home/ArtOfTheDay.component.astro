@@ -1,0 +1,64 @@
+---
+
+---
+
+<div class="default-bottom-spacing">
+  <figure>
+    <img
+      src="assets/leon-spilliaert-maison-sur-la-digue-1907.jpeg"
+      alt="Peinture de Léon Spilliart, Maison sur la digue, datée de 1907"
+    />
+
+    <figcaption>
+      <span class="arrow">↑</span>
+      <span>Léon Spilliaert, <i>Maison sur la digue</i>, 1907</span>
+    </figcaption>
+  </figure>
+</div>
+<style>
+  figure,
+  img {
+    width: 100%;
+    max-width: 100%;
+
+    border-radius: 4px;
+  }
+
+  figcaption {
+    font-size: 14px;
+    font-family: monospace;
+  }
+
+  .arrow {
+    font-size: 14px;
+  }
+
+  @media (min-width: 638px) {
+    figure {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: end;
+    }
+
+    figure img {
+      max-width: 70%;
+    }
+
+    figure figcaption {
+      margin-left: 14px;
+      font-size: 12px;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    figure .arrow {
+      display: inline-block;
+      transform: rotate(-90deg);
+      margin-right: 14px;
+      font-size: 18px;
+    }
+  }
+</style>

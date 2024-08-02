@@ -1,6 +1,6 @@
 ---
-import ColorSwitch from "../components/colorSwitch.component.astro";
-const currentPageIsBlogPost = Astro.url.pathname.includes("blob/");
+import Footer from "../components/Footer.component.astro";
+import Header from "../components/Header.component.astro";
 ---
 
 <html lang="en">
@@ -32,33 +32,6 @@ const currentPageIsBlogPost = Astro.url.pathname.includes("blob/");
     <meta name="theme-color" />
     <title>pedenys</title>
     <script defer src="/_vercel/insights/script.js"></script>
-    <style>
-      nav {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      nav div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      nav a {
-        font-weight: 700;
-        text-decoration: none;
-        color: black;
-      }
-
-      nav a#go-back_arrow {
-        /* padding-top: 3px;
-        margin-right: 10px; */
-        text-decoration: none;
-        color: #111;
-        transition: all ease-in 250ms;
-      }
-    </style>
     <script type="text/javascript">
       /**
        * Avoid FOUC on page load without breaking JS disabled browsers
@@ -74,61 +47,83 @@ const currentPageIsBlogPost = Astro.url.pathname.includes("blob/");
   </head>
 
   <body>
-    <nav>
-      <div>
-        <a href="/">pedenys</a>
+    <div class="website-container">
+      <Header />
+      <div class="content-container">
+        <slot />
       </div>
-      {
-        currentPageIsBlogPost ? (
-          <a id="go-back_arrow" href="/blob">
-            ←
-          </a>
-        ) : (
-          <ColorSwitch />
-        )
-      }
-    </nav>
-    <slot />
+      <Footer />
+    </div>
     <style is:global>
       :root {
-        --tintColor: #c0eccc;
-        --hoverColor: #007f00;
-        --filterEffect: none;
-        --fillColor: #c0eccc;
+        --tintColor: #a5c4a6;
+        --grey-1: #8d8b8b;
+        --black-1: #1e1e1e;
+        --white-1: #ffffff;
+        --white-2: #efefef;
       }
-      [data-theme="green"] {
-        --tintColor: #c0eccc;
-        --hoverColor: #007f00;
-        --filterEffect: none;
-        --fillColor: #c0eccc;
+
+      .tintColor {
+        color: var(--tintColor);
       }
-      [data-theme="yellow"] {
-        --tintColor: #f9f0c1;
-        --hoverColor: #877800;
-        --filterEffect: hue-rotate(300deg);
-        --fillColor: #f9f0c1;
+      .grey-1 {
+        color: var(--grey-1);
       }
-      [data-theme="blue"] {
-        --tintColor: #a5c8e4;
-        --hoverColor: #00007f;
-        --filterEffect: hue-rotate(90deg);
-        --fillColor: #a5c8e4;
+      .black-1 {
+        color: var(--black-1);
       }
-      [data-theme="red"] {
-        --tintColor: #f6a8a6;
-        --hoverColor: #610d0a;
-        --filterEffect: hue-rotate(220deg);
-        --fillColor: #f6a8a6;
+      .white-1 {
+        color: var(--white-1);
+      }
+      .white-2 {
+        color: var(--white-2);
+      }
+
+      @font-face {
+        font-family: "Inter";
+        src: url("/assets/InterVariable.woff2") format("woff2");
+        font-display: swap;
+      }
+
+      html,
+      body,
+      figure,
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
       }
 
       body {
-        font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
-          segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto,
-          arial, sans-serif;
-        background-color: var(--tintColor);
-        margin: 1rem;
+        font-family:
+          Inter,
+          -apple-system,
+          BlinkMacSystemFont,
+          avenir next,
+          avenir,
+          segoe ui,
+          helvetica neue,
+          helvetica,
+          Cantarell,
+          Ubuntu,
+          roboto,
+          noto,
+          arial,
+          sans-serif;
+        color: var(--grey-1);
+        background-color: var(--black-1);
         font-size: 22px;
         line-height: 1.75rem;
+
+        border: 1px solid var(--white-1);
+
+        padding: 16px 16px 0px 16px;
+
+        min-height: 100vh;
+      }
+
+      * {
+        box-sizing: border-box;
       }
 
       code,
@@ -144,36 +139,100 @@ const currentPageIsBlogPost = Astro.url.pathname.includes("blob/");
       p {
         margin: 0;
         padding: 0;
-      }
-
-      p {
-        margin-bottom: 1rem;
+        line-height: 1.3;
+        letter-spacing: 0.8px;
       }
 
       p,
-      li {
-        font-weight: 300;
-        color: #111;
+      figcaption {
+        font-size: 16px;
+        font-weight: 400;
       }
 
       a {
-        color: var(--hoverColor);
+        color: var(--tintColor);
       }
 
+      h2 {
+        font-size: 16px;
+        font-weight: 400;
+
+        color: var(--grey-1);
+      }
+
+      li {
+        font-size: 16px;
+        font-weight: 400;
+        margin-left: 14px;
+      }
+
+      /* Containers */
+      .website-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .content-container {
+          flex-grow: 1;
+          /* Window height minus website container margin-top minus margin-top header & footer */
+          min-height: calc(100vh - (60px + 28px) - (60px + 29px) - 40px - 16px);
+        }
+      }
+
+      /* Posts */
       section.post blockquote p:before {
         content: "«\00a0";
       }
+
       section.post blockquote p:after {
         content: "\00a0»";
       }
+
       section.post img {
         border: 3px double var(--hoverColor);
         width: 100%;
       }
 
+      section.post p {
+        margin-bottom: 28px;
+        font-size: 18px;
+      }
+
+      /* Utility classes */
+      .default-bottom-spacing {
+        margin-bottom: 28px;
+      }
+
+      .default-top-spacing {
+        margin-top: 28px;
+      }
+
+      .no-underline-link {
+        text-decoration: none;
+      }
+
+      .default-link {
+        color: var(--white-1);
+      }
+      .default-link:hover,
+      .default-link:visited {
+        color: var(--white-1);
+      }
+
+      .tint-accent {
+        color: var(--tintColor);
+      }
+
+      /* Desktop */
       @media (min-width: 638px) {
         body {
-          margin: 3rem 4rem;
+          border: none;
+        }
+        body > div {
+          margin-top: 40px;
+          max-width: 55%;
+          width: 100%;
+          margin-inline: auto;
         }
       }
     </style>

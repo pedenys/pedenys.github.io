@@ -1,7 +1,7 @@
 ---
 import Mainlayout from "../layouts/main.layout.astro";
 import PostsComponent from "../components/posts.component.astro";
-import type { Post as PostType } from "../types/post.type";
+import type { Post as PostType } from "../types/writings.type";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./posts/**/*.{md,mdx}")).sort(

@@ -1,0 +1,81 @@
+---
+import type { Entry } from "../../types/writings.type";
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const entries = (await Astro.glob("../../pages/entries/**/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.date).valueOf() -
+    new Date(a.frontmatter.date).valueOf()
+) as Entry[];
+
+const latestEntries = entries.slice(0, 5);
+---
+
+<div class="default-bottom-spacing">
+  <a href="#entries" id="entries" class="no-underline-link"
+    ><h2># Entries</h2></a
+  >
+  {
+    latestEntries.length > 0 && latestEntries[0] && (
+      <section>
+        {/* <h3>{new Date(posts[0].frontmatter.date).getFullYear()}</h3> */}
+        <ul>
+          {latestEntries.map((entry: Entry) => (
+            <li>
+              <a class="default-link" href={entry.url}>
+                {entry.frontmatter.title}
+              </a>
+              <time datetime={entry.frontmatter.date}>
+                {"(" +
+                  new Date(entry.frontmatter.date).toLocaleDateString("fr-fr", {
+                    year: "numeric",
+                    month: "numeric",
+                    // day: "numeric",
+                  }) +
+                  ")"}
+              </time>
+              {/* <code>#{post.frontmatter.tag}</code> */}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  <style>
+    h2 {
+      margin-bottom: 14px;
+      font-size: 18px;
+    }
+    h3 {
+      margin-left: 40px;
+      margin-bottom: 1.7rem;
+    }
+
+    ul {
+      font-size: 18px;
+    }
+
+    time {
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    code {
+      display: inline-block;
+      font-size: 12px;
+      padding-inline: 6px;
+      line-height: 0;
+      padding-block: 10px;
+      color: var(--tintColor);
+      background-color: var(--hoverColor);
+      border-radius: 50px;
+    }
+
+    @media (min-width: 638px) {
+      code {
+        font-size: 10px;
+      }
+    }
+  </style>
+</div>

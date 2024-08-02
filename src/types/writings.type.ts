@@ -7,3 +7,12 @@ export type Post = {
   };
   url: string;
 };
+
+export type Entry = {
+  frontmatter: {
+    date: string;
+    title: string;
+    tag: string[];
+  };
+  url: string;
+};

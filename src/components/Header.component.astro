@@ -1,0 +1,50 @@
+<header class="default-bottom-spacing">
+  <div>
+    <a id="header__homepage_link" href="/"
+      ><p class="name">Pierre-Emmanuel Denys</p></a
+    >
+    <a href="/quotes" id="header__homepage_tagline"
+      ><p class="subtitle grey-1">Disappear here</p></a
+    >
+  </div>
+  <div class="avatar-container">
+    <img src="/assets/avatar.png" alt="" />
+  </div>
+</header>
+
+<style>
+  header {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .name {
+      color: var(--white-1);
+      font-size: 20px;
+
+      margin-bottom: 4px;
+    }
+
+    #header__homepage_link,
+    #header__homepage_tagline {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .subtitle {
+      font-size: 19px;
+    }
+
+    .avatar-container {
+      align-self: flex-start;
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+    }
+  }
+</style>
