@@ -5,7 +5,6 @@ tag: brief-thought
 layout: /src/layouts/blogPost.layout.astro
 ---
 
-import BlogPostLayout from "
 Productivity is not about time management, it's about frustration.
 
 Pushing the "play" button on your keyboard and having Apple Music started, to be closed, then opening manually Spotify.That's the kind of frustration that productivity tackles. Nothing more.
