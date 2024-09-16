@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+// 1. Génére un nouveau chemin pour chaque entrée de collection
+export async function getStaticPaths() {
+  const entries = await getCollection("entries");
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+// 2. Pour votre modèle, vous pouvez obtenir l'entrée directement à partir de la propriété
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Content />

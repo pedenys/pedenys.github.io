@@ -1,5 +1,5 @@
 ---
-import Mainlayout from "./main.layout.astro";
+import Mainlayout from "layouts/main.layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
@@ -44,5 +44,24 @@ const { frontmatter } = Astro.props;
     width: fit-content;
     padding: 8px 10px;
     font-size: 16px;
+  }
+</style>
+<style is:global>
+  #footnote-label {
+    display: none;
+  }
+
+  .footnotes ol {
+    margin-inline: 1em;
+    padding-inline: 1em;
+  }
+
+  .footnotes ol li {
+    font-size: 12px;
+  }
+
+  .footnotes ol li p {
+    font-size: 12px;
+    margin-bottom: 8px;
   }
 </style>
