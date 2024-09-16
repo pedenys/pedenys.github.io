@@ -1,14 +1,11 @@
 ---
-import type { Entry } from "../../types/writings.type";
+import astroConfig from "astro.config.mjs";
+import { getCollection } from "astro:content";
 
-// Use Astro.glob() to fetch all posts, and then sort them by date.
-const entries = (await Astro.glob("../../pages/entries/**/*.{md,mdx}")).sort(
-  (a, b) =>
-    new Date(b.frontmatter.date).valueOf() -
-    new Date(a.frontmatter.date).valueOf()
-) as Entry[];
+const currentLocale = Astro.currentLocale || astroConfig.i18n?.defaultLocale as string
 
-const latestEntries = entries.slice(0, 5);
+const latestEntries = await getCollection("entries");
+const latestEnglishEntries = latestEntries.filter(f => f.id.startsWith(currentLocale))
 ---
 
 <div class="default-bottom-spacing">
@@ -16,18 +13,16 @@ const latestEntries = entries.slice(0, 5);
     ><h2># Entries</h2></a
   >
   {
-    latestEntries.length > 0 && latestEntries[0] && (
+    latestEnglishEntries.length > 0 && latestEnglishEntries[0] && (
       <section>
         {/* <h3>{new Date(posts[0].frontmatter.date).getFullYear()}</h3> */}
         <ul>
-          {latestEntries.map((entry: Entry) => (
+          {latestEnglishEntries.map((entry) => (
             <li>
-              <a class="default-link" href={entry.url}>
-                {entry.frontmatter.title}
-              </a>
-              <time datetime={entry.frontmatter.date}>
+              <a class="default-link" href={`/entries/${entry.slug}`}>{entry.data.title.trim()}</a>
+              <time datetime={entry.data.date}>
                 {"(" +
-                  new Date(entry.frontmatter.date).toLocaleDateString("fr-fr", {
+                  new Date(entry.data.date).toLocaleDateString("fr-fr", {
                     year: "numeric",
                     month: "numeric",
                     // day: "numeric",
