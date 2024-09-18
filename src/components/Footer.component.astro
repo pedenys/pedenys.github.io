@@ -1,24 +1,36 @@
+---
+import LanguagePicker from "components/LanguagePicker.component.astro";
+---
+
 <footer class="default-top-spacing">
-  <p>
-    I'm also not here on <a href="https://x.com/pedenys__" class="default-link"
-      >X</a
-    >, <a href="https://ni.hil.ist/" class="default-link">Mastodon</a> and
-    <a href="https://github.com/pedenys" class="default-link">GitHub</a>
-  </p>
+    <p>
+        I'm also not here on <a
+            href="https://x.com/pedenys__"
+            class="default-link">X</a
+        >, <a href="https://ni.hil.ist/" class="default-link">Mastodon</a> and
+        <a href="https://github.com/pedenys" class="default-link">GitHub</a>
+    </p>
+    <div class="language-picker__container"><LanguagePicker /></div>
 </footer>
 
 <style>
-  footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    min-height: 60px;
+    footer {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 60px;
 
-    border-top: 1px solid var(--grey-1);
+        border-top: 1px solid var(--grey-1);
 
-    p {
-      font-size: 14px;
+        p {
+            font-size: 14px;
+        }
+
+        .language-picker__container {
+            position: absolute;
+            right: 0;
+        }
     }
-  }
 </style>

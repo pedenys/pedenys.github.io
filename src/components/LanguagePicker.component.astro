@@ -1,0 +1,26 @@
+---
+const currentPath = Astro.url.pathname;
+
+import { languages } from "src/i18n/ui";
+const currentLang = Astro.currentLocale || "en";
+---
+
+{
+    Object.entries(languages)
+        .filter(([lang]) => lang !== currentLang)
+        .map(([lang, label]) => (
+            <a
+                class="language"
+                href={currentPath.replace(`/${currentLang}/`, `/${lang}/`)}
+            >
+                -> {label}
+            </a>
+        ))
+}
+
+<style>
+    .language {
+        text-decoration: none;
+        font-size: 14px;
+    }
+</style>
