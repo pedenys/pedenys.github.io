@@ -18,19 +18,24 @@ import LanguagePicker from "components/LanguagePicker.component.astro";
         position: relative;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         min-height: 60px;
 
         border-top: 1px solid var(--grey-1);
+        padding-block: 28px;
 
         p {
             font-size: 14px;
         }
 
         .language-picker__container {
-            position: absolute;
-            right: 0;
+            position: relative;
+            @media (min-width: 638px) {
+                position: absolute;
+                right: 0;
+            }
         }
     }
 </style>
