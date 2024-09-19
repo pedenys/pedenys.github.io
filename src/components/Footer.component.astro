@@ -1,13 +1,18 @@
 ---
 import LanguagePicker from "components/LanguagePicker.component.astro";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 ---
 
 <footer class="default-top-spacing">
     <p>
-        I'm also not here on <a
-            href="https://x.com/pedenys__"
-            class="default-link">X</a
-        >, <a href="https://ni.hil.ist/" class="default-link">Mastodon</a> and
+        {t("footer.absent")}
+        <a href="https://x.com/pedenys__" class="default-link">X</a>, <a
+            href="https://ni.hil.ist/"
+            class="default-link">Mastodon</a
+        >
+        {t("common.and")}
         <a href="https://github.com/pedenys" class="default-link">GitHub</a>
     </p>
     <div class="language-picker__container"><LanguagePicker /></div>
@@ -19,12 +24,12 @@ import LanguagePicker from "components/LanguagePicker.component.astro";
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         min-height: 60px;
 
-        border-top: 1px solid var(--grey-1);
-        padding-block: 28px;
+        border-top: 1px dotted var(--grey-1);
+        padding-block: 14px;
 
         p {
             font-size: 14px;
@@ -33,12 +38,15 @@ import LanguagePicker from "components/LanguagePicker.component.astro";
         .language-picker__container {
             position: relative;
             font-size: 14px;
-            margin-left: 14px;
 
-            @media (min-width: 950px) {
+            @media (min-width: 480px) {
+                /* margin-left: 14px; */
+            }
+
+            /* @media (min-width: 950px) {
                 position: absolute;
                 right: 0;
-            }
+            } */
         }
     }
 </style>

@@ -1,76 +1,90 @@
 ---
 import astroConfig from "astro.config.mjs";
 import { getCollection } from "astro:content";
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
 
-const currentLocale = Astro.currentLocale || astroConfig.i18n?.defaultLocale as string
+const currentLocale =
+    Astro.currentLocale || (astroConfig.i18n?.defaultLocale as string);
 
 const latestEntries = await getCollection("entries");
-const latestEnglishEntries = latestEntries.filter(f => f.id.startsWith(currentLocale))
+const latestLocaleEntries = latestEntries.filter((f) =>
+    f.id.startsWith(currentLocale),
+);
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="default-bottom-spacing">
-  <a href="#entries" id="entries" class="no-underline-link"
-    ><h2># Entries</h2></a
-  >
-  {
-    latestEnglishEntries.length > 0 && latestEnglishEntries[0] && (
-      <section>
-        {/* <h3>{new Date(posts[0].frontmatter.date).getFullYear()}</h3> */}
-        <ul>
-          {latestEnglishEntries.map((entry) => (
-            <li>
-              <a class="default-link" href={`/entries/${entry.slug}`}>{entry.data.title.trim()}</a>
-              <time datetime={entry.data.date}>
-                {"(" +
-                  new Date(entry.data.date).toLocaleDateString("fr-fr", {
-                    year: "numeric",
-                    month: "numeric",
-                    // day: "numeric",
-                  }) +
-                  ")"}
-              </time>
-              {/* <code>#{post.frontmatter.tag}</code> */}
-            </li>
-          ))}
-        </ul>
-      </section>
-    )
-  }
-
-  <style>
-    h2 {
-      margin-bottom: 14px;
-      font-size: 18px;
-    }
-    h3 {
-      margin-left: 40px;
-      margin-bottom: 1.7rem;
+    <a href="#entries" id="entries" class="no-underline-link"
+        ><h2># {t("menu.entries")}</h2></a
+    >
+    {
+        latestLocaleEntries.length > 0 && latestLocaleEntries[0] && (
+            <section>
+                {/* <h3>{new Date(posts[0].frontmatter.date).getFullYear()}</h3> */}
+                <ul>
+                    {latestLocaleEntries.map((entry) => (
+                        <li>
+                            <a
+                                class="default-link"
+                                href={`/entries/${entry.slug}`}
+                            >
+                                {entry.data.title.trim()}
+                            </a>
+                            <time datetime={entry.data.date}>
+                                {"(" +
+                                    new Date(
+                                        entry.data.date,
+                                    ).toLocaleDateString("fr-fr", {
+                                        year: "numeric",
+                                        month: "numeric",
+                                        // day: "numeric",
+                                    }) +
+                                    ")"}
+                            </time>
+                            {/* <code>#{post.frontmatter.tag}</code> */}
+                        </li>
+                    ))}
+                </ul>
+            </section>
+        )
     }
 
-    ul {
-      font-size: 18px;
-    }
+    <style>
+        h2 {
+            margin-bottom: 14px;
+            font-size: 18px;
+        }
+        h3 {
+            margin-left: 40px;
+            margin-bottom: 1.7rem;
+        }
 
-    time {
-      font-size: 14px;
-      white-space: nowrap;
-    }
+        ul {
+            font-size: 18px;
+        }
 
-    code {
-      display: inline-block;
-      font-size: 12px;
-      padding-inline: 6px;
-      line-height: 0;
-      padding-block: 10px;
-      color: var(--tintColor);
-      background-color: var(--hoverColor);
-      border-radius: 50px;
-    }
+        time {
+            font-size: 14px;
+            white-space: nowrap;
+        }
 
-    @media (min-width: 638px) {
-      code {
-        font-size: 10px;
-      }
-    }
-  </style>
+        code {
+            display: inline-block;
+            font-size: 12px;
+            padding-inline: 6px;
+            line-height: 0;
+            padding-block: 10px;
+            color: var(--tintColor);
+            background-color: var(--hoverColor);
+            border-radius: 50px;
+        }
+
+        @media (min-width: 638px) {
+            code {
+                font-size: 10px;
+            }
+        }
+    </style>
 </div>

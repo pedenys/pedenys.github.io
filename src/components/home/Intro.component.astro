@@ -1,12 +1,19 @@
+---
+import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
 <p class="default-bottom-spacing">
-  <span class="tint-accent">Minimalist</span> software developer, trained in <span
-    class="tint-accent">continental philosophy</span
-  >
+    <span class="tint-accent">{t("intro.minimalist")}</span>{
+        t("intro.developerTraindIn")
+    }<span class="tint-accent"> {t("intro.continentalPhilosophy")}</span>
 </p>
 
 <style>
-  p {
-    color: var(--white-1);
-    font-size: 18px;
-  }
+    p {
+        color: var(--white-1);
+        font-size: 18px;
+    }
 </style>
