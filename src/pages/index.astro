@@ -1,18 +1,12 @@
 ---
-import { getLangFromUrl } from "src/i18n/utils";
-
-const lang = getLangFromUrl(Astro.url);
+import ArtOfTheDay from "components/home/ArtOfTheDay.component.astro";
+import Intro from "components/home/Intro.component.astro";
+import Entries from "components/home/Entries.component.astro";
+import Main from "layouts/main.layout.astro";
 ---
 
-<!doctype html>
-<html lang={lang}>
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="refresh" content={`0; url=/${lang}`} />
-        <title>Redirecting</title>
-    </head>
-    <body>
-        <h1>REDIRECTING</h1>
-        <!-- Optionally, you can add some hidden content or message here -->
-    </body>
-</html>
+<Main>
+  <Intro />
+  <ArtOfTheDay />
+  <Entries />
+</Main>

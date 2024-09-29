@@ -1,22 +1,26 @@
 ---
-const currentPath = Astro.url.pathname;
+import { getUrl } from "src/i18n/utils";
 
-import { languages } from "src/i18n/ui";
-const currentLang = Astro.currentLocale || "en";
+const currentLanguage = Astro.currentLocale || "en";
+const targetLanguage = currentLanguage === "en" ? "fr" : "en";
+
+console.log({
+    ass: Astro.url.origin,
+    currentPathname: Astro.url.pathname,
+    currentLanguage,
+});
 ---
 
-{
-    Object.entries(languages)
-        .filter(([lang]) => lang !== currentLang)
-        .map(([lang, label]) => (
-            <a
-                class="language"
-                href={currentPath.replace(`/${currentLang}/`, `/${lang}/`)}
-            >
-                -> {label}
-            </a>
-        ))
-}
+<a
+    class="language"
+    href={getUrl({
+        language: currentLanguage,
+        origin: Astro.url.origin,
+        pathname: Astro.url.pathname,
+    })}
+>
+    {"->"}&nbsp;{targetLanguage}
+</a>
 
 <style>
     .language {
