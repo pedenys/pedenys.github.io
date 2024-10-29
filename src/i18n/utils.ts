@@ -41,7 +41,6 @@ export function getUrl({
     if (pathname === "/" || !pathname) {
       return `${origin}/fr`;
     }
-
     return `${origin}/fr${pathname}`;
   }
 }

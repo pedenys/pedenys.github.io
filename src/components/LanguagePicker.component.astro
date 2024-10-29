@@ -3,12 +3,6 @@ import { getUrl } from "src/i18n/utils";
 
 const currentLanguage = Astro.currentLocale || "en";
 const targetLanguage = currentLanguage === "en" ? "fr" : "en";
-
-console.log({
-    ass: Astro.url.origin,
-    currentPathname: Astro.url.pathname,
-    currentLanguage,
-});
 ---
 
 <a
