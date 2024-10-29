@@ -1,0 +1,14 @@
+{
+  "plugins": ["prettier-plugin-astro"],
+  "rules": {
+    "whitespace-sensitive": "strict",
+  },
+  "overrides": [
+    {
+      "files": "*.astro",
+      "options": {
+        "parser": "astro",
+      },
+    },
+  ],
+}
