@@ -1,18 +1,13 @@
 ---
-import astroConfig from "astro.config.mjs";
 import { getCollection } from "astro:content";
-import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import { useTranslations } from "src/i18n/utils";
 
-const currentLocale =
-  Astro.currentLocale || (astroConfig.i18n?.defaultLocale as string);
+
 
 const latestEntries = await getCollection("entries");
-const latestLocaleEntries = latestEntries.filter((f) =>
-  f.id.startsWith(currentLocale),
-);
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+
+const t = useTranslations();
 ---
 
 <div class="default-bottom-spacing">
@@ -20,21 +15,18 @@ const t = useTranslations(lang);
     ><h2># {t("menu.entries")}</h2></a
   >
   {
-    latestLocaleEntries.length > 0 && latestLocaleEntries[0] && (
+    latestEntries.length > 0 && latestEntries[0] && (
       <section>
         {/* <h3>{new Date(posts[0].frontmatter.date).getFullYear()}</h3> */}
         <ul>
-          {latestLocaleEntries.map((entry) => (
+          {latestEntries.map((entry) => (
             <li>
-              <a class="default-link" href={`/entries/${entry.slug}`}>
-                {entry.data.title}
-              </a>
+              <a class="default-link" href={`/entries/${entry.slug}`}>{entry.data.title}</a>
               <time datetime={entry.data.date}>
                 {"(" +
                   new Date(entry.data.date).toLocaleDateString("fr-fr", {
                     year: "numeric",
-                    month: "numeric",
-                    // day: "numeric",
+                    month: "long",
                   }) +
                   ")"}
               </time>

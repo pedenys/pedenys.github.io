@@ -1,18 +1,9 @@
----
-import astroConfig from "astro.config.mjs";
-
-const currentLocale =
-    Astro.currentLocale || (astroConfig.i18n?.defaultLocale as string);
-
-const hiddenLink = currentLocale === "fr" ? `/${currentLocale}/quotes` : "/";
----
-
 <header class="default-bottom-spacing">
     <div>
         <a id="header__homepage_link" href="/"
             ><p class="name">Pierre-Emmanuel Denys</p></a
         >
-        <a href={hiddenLink} id="header__homepage_tagline"
+        <a href={"/quotes"} id="header__homepage_tagline"
             ><p class="subtitle grey-1">Disappear here</p></a
         >
     </div>

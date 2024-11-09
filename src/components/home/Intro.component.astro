@@ -1,8 +1,7 @@
 ---
-import { getLangFromUrl, useTranslations } from "src/i18n/utils";
+import { useTranslations } from "src/i18n/utils";
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const t = useTranslations();
 ---
 
 <p class="default-bottom-spacing">

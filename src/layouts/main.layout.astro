@@ -1,12 +1,10 @@
 ---
 import Footer from "components/Footer.component.astro";
 import Header from "components/Header.component.astro";
-import { getLangFromUrl } from "src/i18n/utils";
 
-const lang = getLangFromUrl(Astro.url);
 ---
 
-<html lang={lang}>
+<html lang="fr-FR">
     <head>
         <link
             href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
@@ -35,18 +33,6 @@ const lang = getLangFromUrl(Astro.url);
         <meta name="theme-color" />
         <title>pedenys</title>
         <script defer src="/_vercel/insights/script.js"></script>
-        <script type="text/javascript">
-            /**
-             * Avoid FOUC on page load without breaking JS disabled browsers
-             * many thanks to Lawrence Dol | https://stackoverflow.com/a/21668527/14345634
-             */
-
-            var elm = document.getElementsByTagName("html")[0];
-            elm.style.display = "none";
-            document.addEventListener("DOMContentLoaded", function (event) {
-                elm.style.display = "block";
-            });
-        </script>
     </head>
 
     <body>
