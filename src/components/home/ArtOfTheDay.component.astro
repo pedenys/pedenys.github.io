@@ -18,47 +18,33 @@
 <style>
     figure,
     img {
-        width: 100%;
-        max-width: 100%;
 
         border-radius: 4px;
+        margin-bottom: 4px;
+        max-width: 100%;
+        width: 100%;
     }
 
     figcaption {
+        font-family: 'Fira Code', monospace;
         font-size: 14px;
-        font-family: monospace;
     }
 
     .arrow {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     @media (min-width: 638px) {
-        figure {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: end;
-        }
 
         figure img {
-            max-width: 60%;
+            max-width: 45vw;
         }
 
-        figure figcaption {
-            margin-left: 14px;
-            font-size: 12px;
-
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
+        
 
         figure .arrow {
             display: inline-block;
-            transform: rotate(-90deg);
-            margin-right: 14px;
-            font-size: 18px;
+            font-size: 20px;
         }
     }
 </style>
