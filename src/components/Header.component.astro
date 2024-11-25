@@ -1,55 +1,26 @@
-<header class="default-bottom-spacing">
-    <div>
-        <a id="header__homepage_link" href="/"
-            ><p class="name">Pierre-Emmanuel Denys</p></a
-        >
-        <a href={"/quotes"} id="header__homepage_tagline"
-            ><p class="subtitle grey-1">Disappear here</p></a
-        >
-    </div>
-    <div class="avatar-container">
-        <a href="/"><img src="/assets/avatar.png" alt="" /></a>
-    </div>
+<header>
+  <a href="/">pedenys</a>
+  <div id="menu">
+    <a href="/posts">posts</a>
+    <a href="/about">about</a>
+  </div>
 </header>
-
 <style>
-    header {
-        width: 100%;
+  header {
+    background-color: var(--background);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    opacity: 1;
+    padding-block: 0.5rem;
+    padding: 0.8rem 1.6rem;
+    position: sticky;
+    top: 0;
+    max-width: 100%;
+    z-index: 2;
+  }
 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-
-        .name {
-            color: var(--white-1);
-            font-size: 20px;
-
-            margin-bottom: 4px;
-        }
-
-        #header__homepage_link,
-        #header__homepage_tagline {
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .subtitle {
-            font-size: 19px;
-        }
-
-        .avatar-container {
-            align-self: flex-start;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            img {
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-                filter: brightness(75%);
-            }
-        }
-    }
+  header #menu a:not(:last-of-type) {
+    margin-right: 0.5rem;
+  }
 </style>

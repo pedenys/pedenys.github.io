@@ -1,0 +1,10 @@
+---
+import Main from "@/layouts/main.component.astro";
+import { getCollection } from "astro:content";
+const posts = getCollection("posts");
+console.log({ posts });
+---
+
+<Main>
+  <p>Nothing yet ¯\_(ツ)_/¯</p>
+</Main>
