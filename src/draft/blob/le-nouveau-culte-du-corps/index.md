@@ -1,8 +1,0 @@
----
-title: Le nouveau culte du corps
-date: "2021-06-27T20:15:00.284Z"
-description: "Souvenir du livre <b>Le nouveau culte du corps. Dans les pas de Nietzsche</b> de Yannis Constantinidès"
-layout: ./../../../layouts/blogPost.layout.astro
----
-
-Je grimace toujours un peu de voir un philosophe se mettre sous le patronage de Nietzsche pour en épouser plutôt les outrances que les nuances. On retrouve à l'œuvre le même défaut que chez les autres épigones : un conservatisme emprunté et mal caché sous la rhétorique du retour au vrai corps, bien physique, bien matériel, bien sous tous rapports — pas comme celui de la Représentation. Mais je suis sévère, Constantinidès prend soin à quelques moments de rappeler les traits saillants de cette conception nietzschéenne du corps qui, comme toujours chez cet Allemand malin, est double : bête inconsciente et source de «vérités », mais aussi nouvel objet de la sur-morale d'un penseur cultivateur, s'essayant à faire pousser des variétés exotiques. Rien de tout ça n'est suivi ici, si ce n'est une invocation magique de formules destinées à nous ramener dans la voie droite (perdue, comme chacun sait). Le livre est plutôt le lieu d'une plate critique de la société du spectacle (de la religion du sport, du corps médicalisé, de la performance sans *agone*, etc.), toujours inefficace, juxtaposée à ce brave résumé de la physiologie nietzschéenne. Ça ne parviendra certainement pas à "léniniser Nietzsche" pour reprendre un bon mot de Belhaj Kacem sur Debord. Alors quoi, on compte sur la *bonne volonté* du lecteur ? Ruminer prend du temps mais la question est bien de savoir s'il l'on rumine ou si l'on recrache.

@@ -1,41 +1,16 @@
----
-import { useTranslations } from "src/i18n/utils";
-const t = useTranslations();
----
-
-<footer class="default-top-spacing">
-    <p>
-        {t("footer.absent")}
-        <a href="https://x.com/404" class="default-link">X</a>, <a
-            href="https://mastodon.social/404"
-            class="default-link">Mastodon</a
-        >
-        {t("common.and")}
-        <a href="https://github.com/pedenys" class="default-link">GitHub</a>
-    </p>
+<footer>
+  <a href="https://github.com/pedenys">github</a>
+  <a href="mailto:mailto:pedenys@pm.me">mail</a>
 </footer>
-
 <style>
-    footer {
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        min-height: 60px;
-
-        border-top: 1px dotted var(--grey-1);
-        padding-block: 14px;
-
-        p {
-            font-size: 14px;
-        }
-
-        .language-picker__container {
-            position: relative;
-            font-size: 14px;
-        }
-    }
+  footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  a:first-of-type {
+    margin-right: 1rem;
+  }
 </style>
