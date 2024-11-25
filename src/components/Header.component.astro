@@ -1,55 +1,62 @@
 <header class="default-bottom-spacing">
-    <div>
-        <a id="header__homepage_link" href="/"
-            ><p class="name">Pierre-Emmanuel Denys</p></a
-        >
-        <a href={"/quotes"} id="header__homepage_tagline"
-            ><p class="subtitle grey-1">Disappear here</p></a
-        >
-    </div>
-    <div class="avatar-container">
-        <a href="/"><img src="/assets/avatar.png" alt="" /></a>
-    </div>
+  <div>
+    <a id="header__homepage_link" href="/"
+      ><p class="name">Pierre-Emmanuel Denys</p></a
+    >
+    <a href={"/quotes"} id="header__homepage_tagline"
+      ><p class="subtitle grey-1">Disappear here</p></a
+    >
+  </div>
+  <div class="menu-container">
+    <div id="upper-line"></div>
+    <div id="bottom-line"></div>
+  </div>
 </header>
 
 <style>
-    header {
-        width: 100%;
+  header {
+    width: 100%;
 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-        .name {
-            color: var(--white-1);
-            font-size: 20px;
+    .name {
+      color: var(--white-1);
+      font-size: 20px;
 
-            margin-bottom: 4px;
-        }
-
-        #header__homepage_link,
-        #header__homepage_tagline {
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .subtitle {
-            font-size: 19px;
-        }
-
-        .avatar-container {
-            align-self: flex-start;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            img {
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-                filter: brightness(75%);
-            }
-        }
+      margin-bottom: 4px;
     }
+
+    #header__homepage_link,
+    #header__homepage_tagline {
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .subtitle {
+      font-size: 19px;
+    }
+
+    .menu-container {
+      align-self: flex-start;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: 7px;
+
+      div {
+        width: 22px;
+        height: 2px;
+        background-color: var(--white-1);
+      }
+
+      #upper-line {
+        width: 30px;
+        margin-bottom: 7px;
+      }
+    }
+  }
 </style>
