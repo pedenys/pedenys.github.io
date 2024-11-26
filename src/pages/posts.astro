@@ -1,6 +1,7 @@
 ---
 import PostsList from "@/components/postsList.component.astro";
 import Main from "@/layouts/main.component.astro";
+import type { Post } from "@/types/post";
 import { getCollection } from "astro:content";
 const allPosts = await getCollection("posts");
 const postsByNewestDate = allPosts
