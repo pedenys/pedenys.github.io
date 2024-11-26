@@ -1,10 +1,24 @@
 ---
+import PostsList from "@/components/postsList.component.astro";
 import Main from "@/layouts/main.component.astro";
 import { getCollection } from "astro:content";
-const posts = getCollection("posts");
-console.log({ posts });
+const allPosts = await getCollection("posts");
+const postsByNewestDate = allPosts
+  .map((p) => ({
+    ...p,
+    timestamp: p.data.date ? new Date(p.data.date).getTime() : 0,
+  }))
+  .toSorted((p1, p2) => p2.timestamp - p1.timestamp);
+
+const hasPosts = allPosts && Array.isArray(allPosts) && allPosts.length > 0;
 ---
 
 <Main>
-  <p>Nothing yet ¯\_(ツ)_/¯</p>
+  {
+    hasPosts ? (
+      <PostsList posts={postsByNewestDate} />
+    ) : (
+      <p>Nothing yet ¯\_(ツ)_/¯</p>
+    )
+  }
 </Main>

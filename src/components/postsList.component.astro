@@ -1,0 +1,28 @@
+---
+const { posts } = Astro.props;
+import { markdown } from "@astropub/md";
+---
+
+<ul>
+  {
+    posts.map((p) => (
+      <li>
+        <a>
+          <a href={`/posts/${p.slug}`}>{markdown.inline(p.data.title)}</a>
+        </a>
+        <time>
+          {new Date(p.timestamp).toLocaleDateString(undefined, {
+            month: "2-digit",
+            year: "numeric",
+          })}
+        </time>
+      </li>
+    ))
+  }
+</ul>
+<style>
+  time {
+    font-size: smaller;
+    color: grey;
+  }
+</style>

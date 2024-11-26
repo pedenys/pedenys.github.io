@@ -1,0 +1,22 @@
+---
+import Main from "@/layouts/main.component.astro";
+import { getCollection } from "astro:content";
+import { markdown } from "@astropub/md";
+
+// 1. Génére un nouveau chemin pour chaque entrée de collection
+export async function getStaticPaths() {
+  const postsEntries = await getCollection("posts");
+  return postsEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+// 2. Pour votre modèle, vous pouvez obtenir l'entrée directement à partir de la propriété
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+---
+
+<Main>
+  <h1>{markdown.inline(entry.data.title)}</h1>
+  <Content />
+</Main>

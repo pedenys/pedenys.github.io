@@ -15,6 +15,7 @@
     "typescript": "^5.7.2"
   },
   "devDependencies": {
+    "@astropub/md": "^1.0.0",
     "prettier-plugin-astro": "^0.14.1"
   }
 }
