@@ -4,10 +4,19 @@
   --background: #fefefe;
 }
 
+::selection {
+  background: green;
+  color: var(--background);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #fefefe;
     --background: #333;
+  }
+  ::selection {
+    background: darkgreen;
+    color: var(--text);
   }
 }
 
@@ -46,6 +55,11 @@ a:hover {
 
 a:visited {
   color: var(--text);
+}
+
+p {
+  margin: 0;
+  padding-block: 1.6rem;
 }
 
 /* Code blocks <pre> <code> */
